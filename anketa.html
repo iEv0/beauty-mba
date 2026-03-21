@@ -97,7 +97,7 @@ src="https://www.facebook.com/tr?id=1804729973532929&ev=PageView&noscript=1"
     font-weight: 300;
     line-height: 1.7;
     min-height: 100vh;
-    padding-top: var(--topbar-h);
+    padding-top: 72px;
   }
 
 
@@ -122,15 +122,16 @@ src="https://www.facebook.com/tr?id=1804729973532929&ev=PageView&noscript=1"
     background: var(--dark);
     color: var(--cream);
     text-align: center;
-    padding: 0 20px;
-    height: var(--topbar-h);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    font-size: 12px;
-    letter-spacing: 0.06em;
+    padding: 6px 16px;
+    font-size: 11px;
+    letter-spacing: 0.04em;
     line-height: 1.4;
+  }
+  .topbar-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
   }
   .topbar-dot { color: var(--gold); font-size: 8px; opacity: 0.6; }
   .topbar strong { color: var(--gold); font-weight: 600; }
@@ -141,11 +142,39 @@ src="https://www.facebook.com/tr?id=1804729973532929&ev=PageView&noscript=1"
     background: rgba(201,169,110,0.12);
     border: 1px solid rgba(201,169,110,0.25);
     border-radius: 2px;
-    padding: 4px 16px;
-    font-size: 12px;
+    padding: 3px 12px;
+    font-size: 11px;
     color: var(--gold);
+    letter-spacing: 0.05em;
+    text-align: center;
+  }
+  .topbar-timer {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.05em;
+  }
+  .timer-block {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 2px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 3px;
+    padding: 1px 6px;
+    min-width: 36px;
+    justify-content: center;
+  }
+  .timer-label {
+    font-size: 9px;
+    font-weight: 400;
+    color: var(--gold);
+    text-transform: uppercase;
     letter-spacing: 0.06em;
   }
+  .timer-sep { color: var(--gold); font-weight: 700; margin: 0 1px; }
   .topbar-places::before {
     content: '';
     width: 6px; height: 6px;
@@ -388,7 +417,18 @@ src="https://www.facebook.com/tr?id=1804729973532929&ev=PageView&noscript=1"
 
 <!-- ── STICKY TOPBAR ── -->
 <div class="topbar">
-  <div class="topbar-places">Залишилось 3 місця на авторський розбір цього тижня</div>
+  <div class="topbar-inner">
+    <div class="topbar-places">⏳ Набір на BEAUTY MBA [2 сезон] закривається 27/04 о 23:59 · На цьому тижні залишилось 3 місця</div>
+    <div class="topbar-timer">
+      <span class="timer-block"><span id="t-days">00</span><span class="timer-label">дн</span></span>
+      <span class="timer-sep">:</span>
+      <span class="timer-block"><span id="t-hours">00</span><span class="timer-label">год</span></span>
+      <span class="timer-sep">:</span>
+      <span class="timer-block"><span id="t-mins">00</span><span class="timer-label">хв</span></span>
+      <span class="timer-sep">:</span>
+      <span class="timer-block"><span id="t-secs">00</span><span class="timer-label">сек</span></span>
+    </div>
+  </div>
 </div>
 
 <div class="page">
@@ -420,12 +460,13 @@ src="https://www.facebook.com/tr?id=1804729973532929&ev=PageView&noscript=1"
   <!-- ── FORM MAIN ── -->
   <div id="form-main">
     <div class="form-tag">Передзапис відкрито</div>
-    <h1>Анкета запису на розбір салону та презентацію <strong>BEAUTY MBA</strong> <span style="opacity:0.6;font-size:0.75em">[2 сезон]</span></h1>
+    <h1>Дізнайся, чи підходиш ти для <strong>BEAUTY MBA</strong> <span style="opacity:0.6;font-size:0.75em">[2 сезон]</span> — і отримай безкоштовний розбір свого салону</h1>
 
     <div id="form-intro-collapse">
     <div class="intro-card">
       <p>Привіт, це Лера.<br>Якщо ти тут — значить, у нас вже є певний метч. Можливо, ти і майстер, і директор, і адмін в одній особі. Або відчуваєш, що вкладаєш все більше, а результат не змінюється. Або просто розумієш, що так далі — не можна.</p>
       <p>Ця анкета — перший крок. Вона <strong>ні до чого не зобов'язує</strong>.</p>
+      <p>Заповни за 60 секунд — і я особисто підготую конкретні кроки під твою ситуацію ще до нашого дзвінка.</p>
       <p>Після заповнення я особисто звʼяжуся з тобою, щоб обговорити безкоштовний розбір, де:</p>
       <div class="intro-arrow">Занурюємось у твою ситуацію та запит</div>
       <div class="intro-arrow">Формуємо майнд-карту з кроками конкретно під твою ситуацію</div>
@@ -527,11 +568,11 @@ src="https://www.facebook.com/tr?id=1804729973532929&ev=PageView&noscript=1"
         <div class="rgrid col1" id="readyGrid">
           <div class="ropt" data-val="100">100% готова приєднатись</div>
           <div class="ropt" data-val="want-details">Хочу і можу, але хочу більше деталей</div>
-          <div class="ropt" data-val="not-yet">Поки не готова, але цікаво</div>
         </div>
         <div class="field-error" id="errReady">Оберіть варіант</div>
       </div>
 
+      <p style="font-size:12px;color:var(--slate);text-align:center;margin-bottom:16px;line-height:1.5;">📲 Після заповнення я напишу тобі в Telegram протягом 2 годин і запропоную зручний час для безкоштовного розбору</p>
       <button class="btn" id="submitBtn" onclick="submitForm()">Надіслати анкету</button>
       <div class="btn-back" onclick="goPanel1()">← Назад</div>
       <p class="legal">✦ Натискаючи кнопку ти погоджуєшся на обробку персональних даних</p>
@@ -671,7 +712,32 @@ function showThanks() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// ── SOCIAL PROOF TOASTS ──
+// ── COUNTDOWN TIMER ──
+(function() {
+  var deadline = new Date('2026-04-27T23:59:00+03:00').getTime();
+  function pad(n) { return n < 10 ? '0' + n : n; }
+  function tick() {
+    var now = Date.now();
+    var diff = deadline - now;
+    if (diff <= 0) {
+      document.getElementById('t-days').textContent = '00';
+      document.getElementById('t-hours').textContent = '00';
+      document.getElementById('t-mins').textContent = '00';
+      document.getElementById('t-secs').textContent = '00';
+      return;
+    }
+    var d = Math.floor(diff / 86400000);
+    var h = Math.floor((diff % 86400000) / 3600000);
+    var m = Math.floor((diff % 3600000) / 60000);
+    var s = Math.floor((diff % 60000) / 1000);
+    document.getElementById('t-days').textContent = pad(d);
+    document.getElementById('t-hours').textContent = pad(h);
+    document.getElementById('t-mins').textContent = pad(m);
+    document.getElementById('t-secs').textContent = pad(s);
+  }
+  tick();
+  setInterval(tick, 1000);
+})();
 (function() {
   var names = [
     'Катерина С.', 'Юля М.', 'Александра П.', 'Оксана В.', 'Марина Т.',
