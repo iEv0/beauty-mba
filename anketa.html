@@ -420,6 +420,153 @@ src="https://www.facebook.com/tr?id=1804729973532929&ev=PageView&noscript=1"
     display: flex; align-items: center; justify-content: center; gap: 6px;
   }
   .social-btn:hover { border-color: var(--burgundy); color: var(--burgundy); }
+
+  /* ── КЕЙСИ ТА ВІДГУКИ ── */
+  .social-proof-section {
+    background: var(--dark);
+    padding: 60px 24px 80px;
+    margin-top: 0;
+  }
+  .sp-section-title {
+    font-family: 'Prata', serif;
+    font-size: 22px;
+    color: var(--cream);
+    text-align: center;
+    margin-bottom: 32px;
+    letter-spacing: 0.01em;
+  }
+
+  /* Кейси */
+  .cases-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .case-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(201,169,110,0.2);
+    border-radius: 12px;
+    padding: 24px;
+  }
+  .case-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  .case-avatar {
+    width: 42px; height: 42px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--burgundy), var(--gold));
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Prata', serif;
+    font-size: 18px; color: #fff;
+    flex-shrink: 0;
+  }
+  .case-name { font-size: 15px; font-weight: 600; color: var(--cream); }
+  .case-role { font-size: 12px; color: var(--slate); margin-top: 2px; }
+  .case-points {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  .case-col { flex: 1; }
+  .case-col-title {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  .case-item {
+    font-size: 12px;
+    line-height: 1.45;
+    margin-bottom: 7px;
+    padding-left: 14px;
+    position: relative;
+    color: var(--cream);
+    opacity: 0.85;
+  }
+  .case-item--before::before { content: '—'; position: absolute; left: 0; color: var(--slate); }
+  .case-item--after::before { content: '✓'; position: absolute; left: 0; color: #4ade80; }
+  .case-arrow {
+    font-size: 20px;
+    color: var(--gold);
+    padding-top: 20px;
+    flex-shrink: 0;
+  }
+
+  /* Відгуки */
+  .reviews-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .review-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 20px;
+  }
+  .review-stars { color: var(--gold); font-size: 13px; margin-bottom: 10px; letter-spacing: 2px; }
+  .review-text {
+    font-size: 13px;
+    color: var(--cream);
+    line-height: 1.6;
+    opacity: 0.9;
+    margin-bottom: 16px;
+    font-style: italic;
+  }
+  .review-author { display: flex; align-items: center; gap: 10px; }
+  .review-avatar {
+    width: 34px; height: 34px;
+    border-radius: 50%;
+    background: rgba(201,169,110,0.2);
+    border: 1px solid rgba(201,169,110,0.3);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; color: var(--gold); font-weight: 600;
+    flex-shrink: 0;
+  }
+  .review-name { font-size: 13px; font-weight: 600; color: var(--cream); }
+  .review-city { font-size: 11px; color: var(--slate); margin-top: 1px; }
+
+  /* Статистика */
+  .sp-stats {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    margin-top: 48px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid rgba(201,169,110,0.2);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .sp-stat {
+    flex: 1;
+    text-align: center;
+    padding: 20px 12px;
+    border-right: 1px solid rgba(201,169,110,0.15);
+  }
+  .sp-stat:last-child { border-right: none; }
+  .sp-stat-num {
+    font-family: 'Prata', serif;
+    font-size: 28px;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .sp-stat-label {
+    font-size: 11px;
+    color: var(--slate);
+    line-height: 1.4;
+  }
 </style>
 </head>
 <body>
@@ -622,6 +769,139 @@ src="https://www.facebook.com/tr?id=1804729973532929&ev=PageView&noscript=1"
   </div>
 
 </div><!-- /page -->
+
+<!-- ── КЕЙСИ ТА ВІДГУКИ ── -->
+<div class="social-proof-section">
+
+  <div class="sp-section-title">Власниці, які вже пройшли програму</div>
+
+  <!-- КЕЙСИ -->
+  <div class="cases-grid">
+
+    <div class="case-card">
+      <div class="case-header">
+        <div class="case-avatar">Я</div>
+        <div>
+          <div class="case-name">Ярослава</div>
+          <div class="case-role">Власниця salonu poruch.beauty, Одеса</div>
+        </div>
+      </div>
+      <div class="case-points">
+        <div class="case-col">
+          <div class="case-col-title">Точка А</div>
+          <div class="case-item case-item--before">Робота 24/7 в ролі майстра</div>
+          <div class="case-item case-item--before">Хаос у фінансах</div>
+          <div class="case-item case-item--before">4 кредити на 250 000 грн</div>
+        </div>
+        <div class="case-arrow">→</div>
+        <div class="case-col">
+          <div class="case-col-title">Точка Б</div>
+          <div class="case-item case-item--after">Оборот ×2 за час навчання</div>
+          <div class="case-item case-item--after">Прозора аналітика фінансів (P&L)</div>
+          <div class="case-item case-item--after">Збільшила команду та систематизувала процеси</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-card">
+      <div class="case-header">
+        <div class="case-avatar">О</div>
+        <div>
+          <div class="case-name">Оксана</div>
+          <div class="case-role">Власниця nail-студії, Київ</div>
+        </div>
+      </div>
+      <div class="case-points">
+        <div class="case-col">
+          <div class="case-col-title">Точка А</div>
+          <div class="case-item case-item--before">Все тримається на мені</div>
+          <div class="case-item case-item--before">Немає часу на стратегію</div>
+          <div class="case-item case-item--before">Оборот стоїть на місці</div>
+        </div>
+        <div class="case-arrow">→</div>
+        <div class="case-col">
+          <div class="case-col-title">Точка Б</div>
+          <div class="case-item case-item--after">Команда працює автономно</div>
+          <div class="case-item case-item--after">30 хв/день на управління</div>
+          <div class="case-item case-item--after">Дохід зріс у 2 рази за 3 місяці</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ВІДГУКИ -->
+  <div class="sp-section-title" style="margin-top:48px">Що кажуть учениці</div>
+
+  <div class="reviews-grid">
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <div class="review-text">«За 3 місяці програми я нарешті вийшла з операційки. Тепер команда працює без мого постійного контролю — я перевіряю цифри раз на тиждень і займаюсь розвитком.»</div>
+      <div class="review-author">
+        <div class="review-avatar">М</div>
+        <div>
+          <div class="review-name">Марина Т.</div>
+          <div class="review-city">Власниця студії манікюру, Львів</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <div class="review-text">«Оборот виріс з 80 000 до 190 000 грн за 3 місяці. Головне — я зрозуміла, де були діри в системі і як їх закрити. Лера дає дуже конкретні інструменти, без води.»</div>
+      <div class="review-author">
+        <div class="review-avatar">А</div>
+        <div>
+          <div class="review-name">Аліна Д.</div>
+          <div class="review-city">Власниця nail-студії, Харків</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <div class="review-text">«Найбільша цінність — розбори конкретно моєї ситуації. Я не просто вчилась теорії, а одразу впроваджувала. Команда стала стабільнішою, плинність знизилась.»</div>
+      <div class="review-author">
+        <div class="review-avatar">В</div>
+        <div>
+          <div class="review-name">Вікторія Н.</div>
+          <div class="review-city">Власниця салону краси, Одеса</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <div class="review-text">«Після програми я нарешті делегувала адміністративну роботу і взяла собі двох нових майстрів. Страх що «без мене не впораються» пройшов після першого місяця.»</div>
+      <div class="review-author">
+        <div class="review-avatar">Н</div>
+        <div>
+          <div class="review-name">Наталя Р.</div>
+          <div class="review-city">Власниця beauty-студії, Київ</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ЦИФРИ -->
+  <div class="sp-stats">
+    <div class="sp-stat">
+      <div class="sp-stat-num">22+</div>
+      <div class="sp-stat-label">власниць пройшли програму</div>
+    </div>
+    <div class="sp-stat">
+      <div class="sp-stat-num">×2</div>
+      <div class="sp-stat-label">середнє зростання доходу за 3 місяці</div>
+    </div>
+    <div class="sp-stat">
+      <div class="sp-stat-num">30 хв</div>
+      <div class="sp-stat-label">на день на управління після програми</div>
+    </div>
+  </div>
+
+</div><!-- /social-proof-section -->
 
 <script>
 var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwX766a6ezg9MJlKBrC36TzOReMeW9ITPwS92_Z8KBEacyQNs5RdgWrhWRQo8EB5p2lXA/exec';
