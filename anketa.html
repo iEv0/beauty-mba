@@ -597,6 +597,101 @@ src="https://www.facebook.com/tr?id=1804729973532929&ev=PageView&noscript=1"
     color: var(--slate);
     line-height: 1.4;
   }
+
+  /* CTA після кейсів/відгуків */
+  .sp-cta { max-width: 600px; margin: 32px auto 0; }
+  .sp-cta-btn { margin-top: 0; }
+
+  /* Лайтбокс для відгуків */
+  .review-lightbox {
+    display: none;
+    position: fixed; inset: 0;
+    background: rgba(10,9,16,0.92);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+  }
+  .review-lightbox.on { display: flex; }
+  .lb-img {
+    max-width: 90vw;
+    max-height: 85vh;
+    border-radius: 6px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  }
+  .lb-close {
+    position: absolute; top: 16px; right: 20px;
+    width: 38px; height: 38px; border-radius: 50%;
+    background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2);
+    color: var(--cream); font-size: 16px; cursor: pointer;
+  }
+  .lb-close:hover { background: rgba(255,255,255,0.16); }
+  .lb-nav {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    width: 44px; height: 44px; border-radius: 50%;
+    background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2);
+    color: var(--cream); font-size: 18px; cursor: pointer;
+  }
+  .lb-nav:hover { background: rgba(255,255,255,0.16); }
+  .lb-prev { left: 16px; }
+  .lb-next { right: 16px; }
+  @media (max-width: 460px) {
+    .lb-nav { width: 36px; height: 36px; font-size: 15px; }
+    .lb-prev { left: 6px; }
+    .lb-next { right: 6px; }
+  }
+
+  /* ── FOOTER ── */
+  .site-footer {
+    background: var(--dark);
+    border-top: 2px solid var(--burgundy);
+    padding: 32px 24px 28px;
+    margin-top: 0;
+  }
+  .footer-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(155,161,186,0.2);
+  }
+  .footer-brand {
+    font-family: 'Prata', serif;
+    font-size: 15px;
+    letter-spacing: 0.06em;
+    color: var(--cream);
+  }
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+  .footer-links a {
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    color: var(--slate);
+    text-decoration: none;
+  }
+  .footer-links a:hover { color: var(--cream); }
+  .footer-req-label {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--slate);
+    margin: 20px 0 10px;
+  }
+  .footer-req-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px 40px;
+  }
+  .footer-req-item { font-size: 12px; color: var(--cream); opacity: 0.85; line-height: 1.6; }
+  .footer-req-item span { display: block; color: var(--slate); opacity: 0.85; }
 </style>
 </head>
 <body>
@@ -892,20 +987,20 @@ src="https://www.facebook.com/tr?id=1804729973532929&ev=PageView&noscript=1"
   <div class="reviews-carousel">
     <div class="reviews-nav prev" onclick="document.getElementById('reviewsGrid').scrollBy({left:-300,behavior:'smooth'})">←</div>
     <div class="reviews-grid" id="reviewsGrid">
-      <a class="review-shot-link" href="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/01.webp" target="_blank" rel="noopener"><img class="review-shot" loading="lazy" src="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/01.webp" alt="Відгук ученіці 1"></a>
-      <a class="review-shot-link" href="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/02.webp" target="_blank" rel="noopener"><img class="review-shot" loading="lazy" src="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/02.webp" alt="Відгук ученіці 2"></a>
-      <a class="review-shot-link" href="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/03.webp" target="_blank" rel="noopener"><img class="review-shot" loading="lazy" src="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/03.webp" alt="Відгук ученіці 3"></a>
-      <a class="review-shot-link" href="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/04.webp" target="_blank" rel="noopener"><img class="review-shot" loading="lazy" src="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/04.webp" alt="Відгук ученіці 4"></a>
-      <a class="review-shot-link" href="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/05.webp" target="_blank" rel="noopener"><img class="review-shot" loading="lazy" src="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/05.webp" alt="Відгук ученіці 5"></a>
-      <a class="review-shot-link" href="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/06.webp" target="_blank" rel="noopener"><img class="review-shot" loading="lazy" src="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/06.webp" alt="Відгук ученіці 6"></a>
-      <a class="review-shot-link" href="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/07.webp" target="_blank" rel="noopener"><img class="review-shot" loading="lazy" src="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/07.webp" alt="Відгук ученіці 7"></a>
-      <a class="review-shot-link" href="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/08.webp" target="_blank" rel="noopener"><img class="review-shot" loading="lazy" src="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/08.webp" alt="Відгук ученіці 8"></a>
-      <a class="review-shot-link" href="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/09.webp" target="_blank" rel="noopener"><img class="review-shot" loading="lazy" src="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/09.webp" alt="Відгук ученіці 9"></a>
-      <a class="review-shot-link" href="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/10.webp" target="_blank" rel="noopener"><img class="review-shot" loading="lazy" src="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/10.webp" alt="Відгук ученіці 10"></a>
-      <a class="review-shot-link" href="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/11.webp" target="_blank" rel="noopener"><img class="review-shot" loading="lazy" src="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/11.webp" alt="Відгук ученіці 11"></a>
-      <a class="review-shot-link" href="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/12.webp" target="_blank" rel="noopener"><img class="review-shot" loading="lazy" src="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/12.webp" alt="Відгук ученіці 12"></a>
-      <a class="review-shot-link" href="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/13.webp" target="_blank" rel="noopener"><img class="review-shot" loading="lazy" src="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/13.webp" alt="Відгук ученіці 13"></a>
-      <a class="review-shot-link" href="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/14.webp" target="_blank" rel="noopener"><img class="review-shot" loading="lazy" src="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/14.webp" alt="Відгук ученіці 14"></a>
+      <a class="review-shot-link" href="javascript:void(0)" onclick="openReviewLightbox(1)"><img class="review-shot" loading="lazy" src="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/01.webp" alt="Відгук ученіці 1"></a>
+      <a class="review-shot-link" href="javascript:void(0)" onclick="openReviewLightbox(2)"><img class="review-shot" loading="lazy" src="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/02.webp" alt="Відгук ученіці 2"></a>
+      <a class="review-shot-link" href="javascript:void(0)" onclick="openReviewLightbox(3)"><img class="review-shot" loading="lazy" src="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/03.webp" alt="Відгук ученіці 3"></a>
+      <a class="review-shot-link" href="javascript:void(0)" onclick="openReviewLightbox(4)"><img class="review-shot" loading="lazy" src="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/04.webp" alt="Відгук ученіці 4"></a>
+      <a class="review-shot-link" href="javascript:void(0)" onclick="openReviewLightbox(5)"><img class="review-shot" loading="lazy" src="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/05.webp" alt="Відгук ученіці 5"></a>
+      <a class="review-shot-link" href="javascript:void(0)" onclick="openReviewLightbox(6)"><img class="review-shot" loading="lazy" src="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/06.webp" alt="Відгук ученіці 6"></a>
+      <a class="review-shot-link" href="javascript:void(0)" onclick="openReviewLightbox(7)"><img class="review-shot" loading="lazy" src="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/07.webp" alt="Відгук ученіці 7"></a>
+      <a class="review-shot-link" href="javascript:void(0)" onclick="openReviewLightbox(8)"><img class="review-shot" loading="lazy" src="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/08.webp" alt="Відгук ученіці 8"></a>
+      <a class="review-shot-link" href="javascript:void(0)" onclick="openReviewLightbox(9)"><img class="review-shot" loading="lazy" src="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/09.webp" alt="Відгук ученіці 9"></a>
+      <a class="review-shot-link" href="javascript:void(0)" onclick="openReviewLightbox(10)"><img class="review-shot" loading="lazy" src="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/10.webp" alt="Відгук ученіці 10"></a>
+      <a class="review-shot-link" href="javascript:void(0)" onclick="openReviewLightbox(11)"><img class="review-shot" loading="lazy" src="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/11.webp" alt="Відгук ученіці 11"></a>
+      <a class="review-shot-link" href="javascript:void(0)" onclick="openReviewLightbox(12)"><img class="review-shot" loading="lazy" src="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/12.webp" alt="Відгук ученіці 12"></a>
+      <a class="review-shot-link" href="javascript:void(0)" onclick="openReviewLightbox(13)"><img class="review-shot" loading="lazy" src="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/13.webp" alt="Відгук ученіці 13"></a>
+      <a class="review-shot-link" href="javascript:void(0)" onclick="openReviewLightbox(14)"><img class="review-shot" loading="lazy" src="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/14.webp" alt="Відгук ученіці 14"></a>
     </div>
     <div class="reviews-nav next" onclick="document.getElementById('reviewsGrid').scrollBy({left:300,behavior:'smooth'})">→</div>
   </div>
@@ -926,7 +1021,39 @@ src="https://www.facebook.com/tr?id=1804729973532929&ev=PageView&noscript=1"
     </div>
   </div>
 
+  <div class="sp-cta">
+    <button class="btn sp-cta-btn" onclick="scrollToForm()">Заповнити анкету</button>
+  </div>
+
 </div><!-- /social-proof-section -->
+
+<!-- ── LIGHTBOX ── -->
+<div class="review-lightbox" id="reviewLightbox" onclick="if(event.target===this) closeReviewLightbox()">
+  <button class="lb-close" onclick="closeReviewLightbox()" aria-label="Закрити">✕</button>
+  <button class="lb-nav lb-prev" onclick="lightboxStep(-1)" aria-label="Попередній">←</button>
+  <img class="lb-img" id="lbImg" src="" alt="Відгук">
+  <button class="lb-nav lb-next" onclick="lightboxStep(1)" aria-label="Наступний">→</button>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">BEAUTY MBA</div>
+      <div class="footer-links">
+        <a href="https://t.me/+rJxxiQxqpx0xYmZi" target="_blank" rel="noopener">Telegram</a>
+        <a href="https://www.instagram.com/valeria.vulakh/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://docs.google.com/document/d/1wwd2imhoLRCEoE7s7H5dZQS_jwqx_HP_NdiccDPbURI/edit?usp=sharing" target="_blank" rel="noopener">Політика конфіденційності</a>
+        <a href="https://docs.google.com/document/d/1akmkH76QPV1oV2q8fft9r3eNwJqDPt1HiRpdWw8ELXY/edit?usp=sharing" target="_blank" rel="noopener">Публічна оферта</a>
+      </div>
+    </div>
+    <div class="footer-req-label">Реквізити</div>
+    <div class="footer-req-grid">
+      <div class="footer-req-item">ФОП Пономарьова Валерія Юріївна<span>ІПН: 3251216881</span></div>
+      <div class="footer-req-item">ФОП Іванова Алла Анатоліївна<span>ІПН: 2416700220</span></div>
+    </div>
+  </div>
+</footer>
 
 <script>
 var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwX766a6ezg9MJlKBrC36TzOReMeW9ITPwS92_Z8KBEacyQNs5RdgWrhWRQo8EB5p2lXA/exec';
@@ -1129,6 +1256,48 @@ function showThanks() {
     setInterval(showToast, 20000 + Math.random() * 15000);
   }, 8000);
 })();
+</script>
+
+<script>
+// ── Лайтбокс для скрінів відгуків ──
+var reviewShots = [];
+for (var i = 1; i <= 14; i++) {
+  reviewShots.push('https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/' + (i < 10 ? '0' + i : i) + '.webp');
+}
+var lbIndex = 0;
+
+window.openReviewLightbox = function(i) {
+  lbIndex = i - 1;
+  document.getElementById('lbImg').src = reviewShots[lbIndex];
+  document.getElementById('reviewLightbox').classList.add('on');
+};
+window.closeReviewLightbox = function() {
+  document.getElementById('reviewLightbox').classList.remove('on');
+};
+window.lightboxStep = function(dir) {
+  lbIndex = (lbIndex + dir + reviewShots.length) % reviewShots.length;
+  document.getElementById('lbImg').src = reviewShots[lbIndex];
+};
+document.addEventListener('keydown', function(e) {
+  if (!document.getElementById('reviewLightbox').classList.contains('on')) return;
+  if (e.key === 'Escape') closeReviewLightbox();
+  if (e.key === 'ArrowLeft') lightboxStep(-1);
+  if (e.key === 'ArrowRight') lightboxStep(1);
+});
+
+// ── Повернутись до анкети (Крок 1) з блоку кейсів/відгуків ──
+window.scrollToForm = function() {
+  var panel2 = document.getElementById('panel2');
+  if (panel2 && panel2.classList.contains('active') && typeof goPanel1 === 'function') {
+    goPanel1();
+  } else {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  setTimeout(function() {
+    var el = document.getElementById('fName');
+    if (el) el.focus();
+  }, 450);
+};
 </script>
 </body>
 </html>
