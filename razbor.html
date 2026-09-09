@@ -597,6 +597,10 @@ src="https://www.facebook.com/tr?id=1804729973532929&ev=PageView&noscript=1"
     .reviews-nav.next { right: -6px; }
   }
 
+  /* CTA після кейсів/відгуків */
+  .sp-cta { max-width: 600px; margin: 28px auto 0; }
+  .sp-cta-btn { margin-top: 0; }
+
   /* Лайтбокс для відгуків */
   .review-lightbox {
     display: none;
@@ -714,25 +718,6 @@ src="https://www.facebook.com/tr?id=1804729973532929&ev=PageView&noscript=1"
   <!-- ── COLLAPSIBLE TOP ── -->
   <div id="top-collapse">
 
-  <!-- ── EXPERT HERO ── -->
-  <div class="expert-hero">
-    <div class="expert-photo-wrap">
-      <img class="expert-photo" src="lera_photo.jpg" alt="Валерія Пономарьова" onerror="this.style.background='#E2D9CE'">
-    </div>
-    <div class="expert-info">
-      <div class="expert-name">Валерія Пономарьова</div>
-      <div class="brand-tag">MANICULT · BEAUTY MBA</div>
-      <ul class="expert-facts">
-        <li>У бʼюті сфері вже більше 10 років</li>
-        <li>Пройшла шлях від маленького кабінету у 10 м² до великої студії манікюру з командою понад 20 людей — всього за два роки</li>
-        <li>Практичний досвід побудови системи в двох країнах — в Україні та Південній Африці</li>
-        <li>Салон у Кейптауні за перші місяці роботи виріс до обороту понад 55 000$</li>
-        <li>5 років керую дистанційно MANICULT в Києві витрачаючи 30 хвилин на день</li>
-        <li>Учениці ростуть ×2 в доході за 3 місяці</li>
-      </ul>
-    </div>
-  </div>
-
   <!-- ── WHAT YOU GET BLOCK ── -->
   <div class="form-tag" style="margin-bottom:12px">Запис відкрито</div>
   <h1 style="margin-bottom:20px">Запишись на безкоштовний <strong>розбір</strong> свого салону з Лерою</h1>
@@ -791,6 +776,25 @@ src="https://www.facebook.com/tr?id=1804729973532929&ev=PageView&noscript=1"
       </div>
 
       <button class="btn" onclick="goPanel2()">Далі →</button>
+
+      <!-- ── EXPERT HERO (про Леру) ── -->
+      <div class="expert-hero" style="margin-top:32px;border-bottom:none;padding-bottom:0;">
+        <div class="expert-photo-wrap">
+          <img class="expert-photo" src="lera_photo.jpg" alt="Валерія Пономарьова" onerror="this.style.background='#E2D9CE'">
+        </div>
+        <div class="expert-info">
+          <div class="expert-name">Валерія Пономарьова</div>
+          <div class="brand-tag">MANICULT · BEAUTY MBA</div>
+          <ul class="expert-facts">
+            <li>У бʼюті сфері вже більше 10 років</li>
+            <li>Пройшла шлях від маленького кабінету у 10 м² до великої студії манікюру з командою понад 20 людей — всього за два роки</li>
+            <li>Практичний досвід побудови системи в двох країнах — в Україні та Південній Африці</li>
+            <li>Салон у Кейптауні за перші місяці роботи виріс до обороту понад 55 000$</li>
+            <li>5 років керую дистанційно MANICULT в Києві витрачаючи 30 хвилин на день</li>
+            <li>Учениці ростуть ×2 в доході за 3 місяці</li>
+          </ul>
+        </div>
+      </div>
     </div>
 
     <!-- PANEL 2 -->
@@ -985,6 +989,10 @@ src="https://www.facebook.com/tr?id=1804729973532929&ev=PageView&noscript=1"
 
   </div>
 
+  <div class="sp-cta">
+    <button class="btn sp-cta-btn" onclick="scrollToForm()">Записатись на розбір</button>
+  </div>
+
   <!-- ВІДГУКИ -->
   <div class="sp-section-title" style="margin-top:48px">Що кажуть про роботу з Лерою</div>
 
@@ -1007,6 +1015,10 @@ src="https://www.facebook.com/tr?id=1804729973532929&ev=PageView&noscript=1"
       <a class="review-shot-link" href="javascript:void(0)" onclick="openReviewLightbox(14)"><img class="review-shot" loading="lazy" src="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/14.webp" alt="Відгук ученіці 14"></a>
     </div>
     <div class="reviews-nav next" onclick="document.getElementById('reviewsGrid').scrollBy({left:300,behavior:'smooth'})">→</div>
+  </div>
+
+  <div class="sp-cta">
+    <button class="btn sp-cta-btn" onclick="scrollToForm()">Записатись на розбір</button>
   </div>
 
 </div><!-- /social-proof-section -->
@@ -1135,37 +1147,9 @@ function showThanks() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// ── COUNTDOWN TIMER TO NEXT WEDNESDAY 17:00 KYIV TIME ──
+// ── COUNTDOWN TIMER TO RAZBOR START (2026-09-10 18:00 KYIV TIME) ──
 (function() {
-  function getNextWednesday1700() {
-    // Kyiv is UTC+2 (or UTC+3 in summer). We'll compute using local Date in UTC+2/3
-    var now = new Date();
-    // Find the next Wednesday at 17:00 Kyiv (UTC+3 during DST, UTC+2 otherwise)
-    // Simple approach: compute Wednesday 17:00 in Europe/Kyiv
-    // Kyiv is UTC+2 standard, UTC+3 summer (DST starts last Sunday March, ends last Sunday October)
-    // March 23 2026 = DST active → UTC+3
-    var kyivOffset = 3 * 60; // minutes, adjust if needed
-    var nowUtc = now.getTime() + now.getTimezoneOffset() * 60000;
-    var kyivNow = new Date(nowUtc + kyivOffset * 60000);
-
-    var day = kyivNow.getDay(); // 0=Sun, 3=Wed
-    var daysUntilWed = (3 - day + 7) % 7;
-    if (daysUntilWed === 0) {
-      // Today is Wednesday — check if 17:00 has passed
-      var todayAt17 = new Date(kyivNow);
-      todayAt17.setHours(17, 0, 0, 0);
-      if (kyivNow >= todayAt17) daysUntilWed = 7; // next week
-    }
-
-    var target = new Date(kyivNow);
-    target.setDate(target.getDate() + daysUntilWed);
-    target.setHours(17, 0, 0, 0);
-
-    // Convert back to UTC ms
-    return target.getTime() - kyivOffset * 60000;
-  }
-
-  var deadline = getNextWednesday1700();
+  var deadline = new Date('2026-09-10T18:00:00+03:00').getTime();
 
   function pad(n, len) {
     var s = String(n);
@@ -1176,9 +1160,12 @@ function showThanks() {
   function tick() {
     var diff = deadline - Date.now();
     if (diff <= 0) {
-      // Recalculate for next Wednesday
-      deadline = getNextWednesday1700();
-      diff = deadline - Date.now();
+      document.getElementById('t-days').textContent  = '00';
+      document.getElementById('t-hours').textContent = '00';
+      document.getElementById('t-mins').textContent  = '00';
+      document.getElementById('t-secs').textContent  = '00';
+      document.getElementById('t-ms').textContent    = '000';
+      return;
     }
     var d  = Math.floor(diff / 86400000);
     var h  = Math.floor((diff % 86400000) / 3600000);
@@ -1289,6 +1276,20 @@ document.addEventListener('keydown', function(e) {
   if (e.key === 'ArrowLeft') lightboxStep(-1);
   if (e.key === 'ArrowRight') lightboxStep(1);
 });
+
+// ── Повернутись до контактів (Крок 1) з блоку кейсів/відгуків ──
+window.scrollToForm = function() {
+  var panel2 = document.getElementById('panel2');
+  if (panel2 && panel2.classList.contains('active') && typeof goPanel1 === 'function') {
+    goPanel1();
+  } else {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  setTimeout(function() {
+    var el = document.getElementById('fName');
+    if (el) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); el.focus(); }
+  }, 450);
+};
 </script>
 </body>
 </html>
