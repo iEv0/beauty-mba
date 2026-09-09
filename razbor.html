@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Анкета запису на розбір · BEAUTY MBA 3 сезон</title>
+<title>Анкета запису на безкоштовний розбір · BEAUTY MBA</title>
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -99,7 +99,6 @@ src="https://www.facebook.com/tr?id=1804729973532929&ev=PageView&noscript=1"
     min-height: 100vh;
     padding-top: 72px;
   }
-
 
   /* ── COLLAPSIBLE TOP SECTIONS ── */
   #top-collapse, #form-intro-collapse {
@@ -260,6 +259,47 @@ src="https://www.facebook.com/tr?id=1804729973532929&ev=PageView&noscript=1"
     .expert-facts li { justify-content: flex-start; text-align: left; }
   }
 
+  /* ── WHAT YOU GET BLOCK ── */
+  .razvor-block {
+    background: white;
+    border: 1px solid var(--light-border);
+    border-top: 3px solid var(--gold);
+    border-radius: 4px;
+    padding: 22px 22px;
+    margin-bottom: 24px;
+  }
+  .razvor-block-title {
+    font-family: 'Prata', serif;
+    font-size: 17px;
+    font-weight: 400;
+    margin-bottom: 16px;
+    color: var(--dark);
+    line-height: 1.3;
+  }
+  .razvor-item {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--slate);
+  }
+  .razvor-item:last-child { margin-bottom: 0; }
+  .razvor-num {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--burgundy);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 600;
+    margin-top: 1px;
+  }
+
   /* ── FORM HEADER ── */
   .form-tag {
     display: inline-block;
@@ -324,15 +364,20 @@ src="https://www.facebook.com/tr?id=1804729973532929&ev=PageView&noscript=1"
     color: var(--slate); margin-bottom: 8px;
   }
   .field-label span { color: var(--burgundy); }
-  input[type="text"] {
+  input[type="text"], textarea {
     width: 100%; padding: 13px 16px;
     border: 1px solid var(--light-border); border-radius: 4px;
     font-family: 'Aktiv Grotesk Corp', sans-serif; font-size: 15px; font-weight: 300;
     color: var(--dark); background: white; outline: none;
     transition: border-color 0.2s; -webkit-appearance: none;
   }
-  input:focus { border-color: var(--burgundy); }
-  input.err { border-color: var(--error-border); background: var(--error-bg); }
+  textarea {
+    resize: vertical;
+    min-height: 88px;
+    line-height: 1.6;
+  }
+  input:focus, textarea:focus { border-color: var(--burgundy); }
+  input.err, textarea.err { border-color: var(--error-border); background: var(--error-bg); }
   .field-error { font-size: 12px; color: var(--error); margin-top: 5px; display: none; }
   .field-error.on { display: block; }
 
@@ -364,19 +409,6 @@ src="https://www.facebook.com/tr?id=1804729973532929&ev=PageView&noscript=1"
   }
   .btn:hover { background: #5E1D28; transform: translateY(-1px); }
   .btn:disabled { background: var(--dusty); cursor: not-allowed; transform: none; }
-  .cases-hint {
-    display: flex; align-items: center; justify-content: center; gap: 6px;
-    font-size: 12px; color: var(--dusty); text-align: center;
-    margin-top: 18px; letter-spacing: 0.03em;
-  }
-  .cases-hint-arrow {
-    display: inline-block; color: var(--burgundy);
-    animation: hintBounce 1.6s ease-in-out infinite;
-  }
-  @keyframes hintBounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(4px); }
-  }
   .btn-back {
     display: block; text-align: center; font-size: 12px; color: var(--dusty);
     cursor: pointer; margin-top: 16px; letter-spacing: 0.04em;
@@ -412,25 +444,25 @@ src="https://www.facebook.com/tr?id=1804729973532929&ev=PageView&noscript=1"
     font-family: 'Prata', serif;
     font-size: 26px; font-weight: 600; margin-bottom: 8px; line-height: 1.2;
   }
-  .gift-desc { font-size: 14px; color: var(--slate); line-height: 1.7; margin-bottom: 16px; }
-  .gift-btn {
-    display: flex; align-items: center; justify-content: center; gap: 8px;
-    background: #26A5E4; color: white;
-    padding: 14px; border-radius: 4px; font-size: 13px; font-weight: 600;
-    letter-spacing: 0.04em; text-decoration: none; transition: background 0.2s;
+  .gift-desc {
+    font-size: 14px; color: var(--slate); margin-bottom: 20px; line-height: 1.65;
   }
-  .gift-btn:hover { background: #1d8fc7; }
-  .gift-btn svg { flex-shrink: 0; }
+  .gift-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: #2AABEE; color: white; text-decoration: none;
+    padding: 13px 22px; border-radius: 4px;
+    font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+    transition: background 0.2s;
+  }
+  .gift-btn:hover { background: #1A8FCC; }
 
-  /* Social follow */
-  .social-prompt { font-size: 13px; color: var(--slate); margin-bottom: 12px; text-align: center; }
+  .social-prompt { font-size: 13px; color: var(--dusty); text-align: center; margin-bottom: 14px; }
   .social-btns { display: flex; gap: 10px; justify-content: center; }
   .social-btn {
-    flex: 1; padding: 11px 16px; border: 1px solid var(--light-border);
-    border-radius: 4px; font-size: 13px; font-weight: 500;
-    text-decoration: none; color: var(--dark); text-align: center;
-    transition: border-color 0.2s, color 0.2s;
-    display: flex; align-items: center; justify-content: center; gap: 6px;
+    display: inline-flex; align-items: center; gap: 7px;
+    padding: 10px 20px; border: 1px solid var(--light-border); border-radius: 4px;
+    font-size: 12px; font-weight: 500; color: var(--dark); text-decoration: none;
+    transition: border-color 0.2s;
   }
   .social-btn:hover { border-color: var(--burgundy); color: var(--burgundy); }
 
@@ -565,43 +597,6 @@ src="https://www.facebook.com/tr?id=1804729973532929&ev=PageView&noscript=1"
     .reviews-nav.next { right: -6px; }
   }
 
-  /* Статистика */
-  .sp-stats {
-    display: flex;
-    justify-content: center;
-    gap: 0;
-    margin-top: 48px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    border: 1px solid rgba(155,161,186,0.2);
-    border-radius: 12px;
-    overflow: hidden;
-  }
-  .sp-stat {
-    flex: 1;
-    text-align: center;
-    padding: 20px 12px;
-    border-right: 1px solid rgba(155,161,186,0.15);
-  }
-  .sp-stat:last-child { border-right: none; }
-  .sp-stat-num {
-    font-family: 'Prata', serif;
-    font-size: 28px;
-    color: var(--gold);
-    line-height: 1;
-    margin-bottom: 6px;
-  }
-  .sp-stat-label {
-    font-size: 11px;
-    color: var(--slate);
-    line-height: 1.4;
-  }
-
-  /* CTA після кейсів/відгуків */
-  .sp-cta { max-width: 600px; margin: 32px auto 0; }
-  .sp-cta-btn { margin-top: 0; }
-
   /* Лайтбокс для відгуків */
   .review-lightbox {
     display: none;
@@ -696,11 +691,10 @@ src="https://www.facebook.com/tr?id=1804729973532929&ev=PageView&noscript=1"
 </head>
 <body>
 
-<!-- ── STICKY TOPBAR ── -->
+<!-- STICKY TOPBAR -->
 <div class="topbar">
   <div class="topbar-inner">
-    <div class="topbar-places">⏳ Набір на BEAUTY MBA [3 сезон] закривається <span style="white-space:nowrap">17/09 о 23:59</span></div>
-    <div class="topbar-spots">🔴 На цьому тижні залишилось <strong>3 місця</strong> на розбір</div>
+    <div class="topbar-places">⏳ До старту розборів залишилось</div>
     <div class="topbar-timer">
       <span class="timer-block"><span id="t-days">00</span><span class="timer-label">дн</span></span>
       <span class="timer-sep">:</span>
@@ -709,6 +703,8 @@ src="https://www.facebook.com/tr?id=1804729973532929&ev=PageView&noscript=1"
       <span class="timer-block"><span id="t-mins">00</span><span class="timer-label">хв</span></span>
       <span class="timer-sep">:</span>
       <span class="timer-block"><span id="t-secs">00</span><span class="timer-label">сек</span></span>
+      <span class="timer-sep">:</span>
+      <span class="timer-block"><span id="t-ms">000</span><span class="timer-label">мс</span></span>
     </div>
   </div>
 </div>
@@ -737,31 +733,31 @@ src="https://www.facebook.com/tr?id=1804729973532929&ev=PageView&noscript=1"
     </div>
   </div>
 
+  <!-- ── WHAT YOU GET BLOCK ── -->
+  <div class="form-tag" style="margin-bottom:12px">Запис відкрито</div>
+  <h1 style="margin-bottom:20px">Запишись на безкоштовний <strong>розбір</strong> свого салону з Лерою</h1>
+  <div class="razvor-block">
+    <div class="razvor-block-title">Що відбувається на безкоштовному розборі</div>
+    <div class="razvor-item">
+      <div class="razvor-num">1</div>
+      <div>Розбираємо твою поточну ситуацію — що болить, де застрягла, чому не росте дохід попри всі зусилля</div>
+    </div>
+    <div class="razvor-item">
+      <div class="razvor-num">2</div>
+      <div>Знаходимо конкретне вузьке місце у твоєму бізнесі — те, що зупиняє ріст прямо зараз</div>
+    </div>
+    <div class="razvor-item">
+      <div class="razvor-num">3</div>
+      <div>Формуємо покроковий план дій під твою ситуацію — що робити в першу чергу, щоб побачити результат</div>
+    </div>
+  </div>
+
   </div><!-- /top-collapse -->
 
   <!-- ── FORM MAIN ── -->
   <div id="form-main">
-    <div class="form-tag">Передзапис відкрито</div>
-    <h1>Дізнайся, чи підходиш ти для <strong>BEAUTY MBA</strong> <span style="opacity:0.6;font-size:0.75em">[3 сезон]</span> — і отримай безкоштовний розбір свого салону</h1>
-
     <div id="form-intro-collapse">
-    <div class="intro-card">
-      <p>Привіт, це Лера.<br>Якщо ти тут — значить, у нас вже є певний метч. Можливо, ти і майстер, і директор, і адмін в одній особі. Або відчуваєш, що вкладаєш все більше, а результат не змінюється. Або просто розумієш, що так далі — не можна.</p>
-      <p>Заповни за 60 секунд — і я особисто підготую конкретні кроки під твою ситуацію ще до нашого дзвінка.</p>
-      <p>Після заповнення я особисто звʼяжуся з тобою, щоб обговорити безкоштовний розбір, де:</p>
-      <div class="intro-arrow">Занурюємось у твою ситуацію та запит</div>
-      <div class="intro-arrow">Формуємо майнд-карту з кроками конкретно під твою ситуацію</div>
-      <div class="intro-arrow">Якщо бачу, що зможу дати тобі результат — розповідаю як приєднатись за умовами передзапису до <strong>BEAUTY MBA</strong></div>
-    </div>
-
-    <div class="benefits">
-      <div class="benefits-title">Заповнивши анкету, ти також отримаєш:</div>
-      <div class="benefit-item">Зафіксуєш за собою найнижчу вартість участі в програмі</div>
-      <div class="benefit-item">Знижку від 400€ та бонуси на 630€+ до будь-якого тарифу 🎁</div>
-      <div class="benefit-item">Подарунки від BEAUTY MBA — добірка найкорисніших файлів для майстрів і власниць салонів: інтенсив, чек-листи, таблиці та макети, щоб зібрати команду, завантажити салон і контролювати метрики, які реально впливають на дохід</div>
-    </div>
-
-    <p class="form-note">Заповнення займає 1 хвилину</p>
+    <p class="form-note">Заповнення займає 2 хвилини</p>
     </div><!-- /form-intro-collapse -->
 
     <!-- STEP INDICATOR -->
@@ -795,38 +791,22 @@ src="https://www.facebook.com/tr?id=1804729973532929&ev=PageView&noscript=1"
       </div>
 
       <button class="btn" onclick="goPanel2()">Далі →</button>
-      <div class="cases-hint">Кейси учениць і відгуки — нижче<span class="cases-hint-arrow">↓</span></div>
     </div>
 
     <!-- PANEL 2 -->
     <div class="panel" id="panel2">
-      <div class="panel-title">Крок 2 — Кілька питань</div>
+      <div class="panel-title">Крок 2 — Про твій бізнес</div>
       <p class="panel-hint">Це допоможе підготуватись до розмови конкретно під твою ситуацію</p>
 
       <div class="field">
-        <label class="field-label">Який твій основний вид діяльності? <span>*</span></label>
+        <label class="field-label">Ким ти зараз є у своєму бізнесі? <span>*</span></label>
         <div class="rgrid col1" id="actGrid">
-          <div class="ropt" data-val="owner">Я власниця салону</div>
-          <div class="ropt" data-val="manager">Я керуюча студією / мережею</div>
-          <div class="ropt" data-val="master-owner">Я майстриня й паралельно розвиваю свій салон</div>
-          <div class="ropt" data-val="planning">Я планую відкрити салон</div>
+          <div class="ropt" data-val="owner">Я власниця салону — є команда, сама вже не працюю руками</div>
+          <div class="ropt" data-val="owner-master">Я власниця, але ще й сама приймаю клієнтів</div>
+          <div class="ropt" data-val="master-growing">Я майстриня й паралельно намагаюсь вибудувати салон</div>
+          <div class="ropt" data-val="planning">Я планую відкрити салон найближчим часом</div>
         </div>
         <div class="field-error" id="errAct">Оберіть варіант</div>
-      </div>
-
-      <hr class="form-divider">
-
-      <div class="field">
-        <label class="field-label">Як давно ти підписана на мене? <span>*</span></label>
-        <div class="rgrid" id="subGrid">
-          <div class="ropt" data-val="lt1m">До 1 місяця</div>
-          <div class="ropt" data-val="1-2m">1–2 місяці</div>
-          <div class="ropt" data-val="3-5m">3–5 місяців</div>
-          <div class="ropt" data-val="6-12m">6–12 місяців</div>
-          <div class="ropt" data-val="1y+">Більше року</div>
-          <div class="ropt" data-val="2-3y+">2–3+ роки</div>
-        </div>
-        <div class="field-error" id="errSub">Оберіть варіант</div>
       </div>
 
       <hr class="form-divider">
@@ -846,15 +826,39 @@ src="https://www.facebook.com/tr?id=1804729973532929&ev=PageView&noscript=1"
       <hr class="form-divider">
 
       <div class="field">
-        <label class="field-label">Наскільки ти зараз готова до участі в BEAUTY MBA 3 сезон? <span>*</span></label>
-        <div class="rgrid col1" id="readyGrid">
-          <div class="ropt" data-val="100">100% готова приєднатись</div>
-          <div class="ropt" data-val="want-details">Хочу і можу, але хочу більше деталей</div>
+        <label class="field-label">Скільки людей у тебе в команді? <span>*</span></label>
+        <div class="rgrid" id="teamGrid">
+          <div class="ropt" data-val="0">Поки що немає</div>
+          <div class="ropt" data-val="1-2">1–2 майстри</div>
+          <div class="ropt" data-val="3-5">3–5 майстрів</div>
+          <div class="ropt" data-val="6+">6 і більше</div>
         </div>
-        <div class="field-error" id="errReady">Оберіть варіант</div>
+        <div class="field-error" id="errTeam">Оберіть варіант</div>
       </div>
 
-      <p style="font-size:12px;color:var(--slate);text-align:center;margin-bottom:16px;line-height:1.5;">📲 Після заповнення я напишу тобі в Telegram протягом 2 годин і запропоную зручний час для безкоштовного розбору</p>
+      <hr class="form-divider">
+
+      <div class="field">
+        <label class="field-label">Який зараз головний запит або біль? <span>*</span></label>
+        <div class="rgrid col1" id="painGrid">
+          <div class="ropt" data-val="team">Команда — плинність, пошук майстрів, мотивація</div>
+          <div class="ropt" data-val="clients">Клієнти — немає стабільного потоку, залежність від акцій</div>
+          <div class="ropt" data-val="profit">Оборот є, але чистий прибуток мінімальний</div>
+          <div class="ropt" data-val="myself">Все тримається на мені — не можу вийти з операційки</div>
+          <div class="ropt" data-val="scale">Хочу масштабуватись, але не знаю з чого починати</div>
+        </div>
+        <div class="field-error" id="errPain">Оберіть варіант</div>
+      </div>
+
+      <hr class="form-divider">
+
+      <div class="field">
+        <label class="field-label">Розкажи коротко — що зараз відбувається в бізнесі? <span>*</span></label>
+        <textarea id="fDescr" placeholder="Наприклад: є 3 майстри, оборот ~150к, сама ще приймаю, весь час в роботі але доходу не вистачає…"></textarea>
+        <div class="field-error" id="errDescr">Напиши кілька слів про свою ситуацію</div>
+      </div>
+
+      <p style="font-size:12px;color:var(--slate);text-align:center;margin-bottom:16px;line-height:1.5;">📲 Після заповнення я напишу тобі в Telegram і запропоную зручний час для розбору</p>
       <button class="btn" id="submitBtn" onclick="submitForm()">Надіслати анкету</button>
       <div class="btn-back" onclick="goPanel1()">← Назад</div>
       <p class="legal">✦ Натискаючи кнопку ти погоджуєшся на обробку персональних даних</p>
@@ -866,17 +870,17 @@ src="https://www.facebook.com/tr?id=1804729973532929&ev=PageView&noscript=1"
     <div class="ty-wrap">
       <span class="ty-emoji">🌸</span>
       <h2 class="ty-title">Дякую — відпишу<br>найближчим часом</h2>
-      <p class="ty-sub">Я особисто переглянула твою анкету і звʼяжусь з тобою, щоб узгодити час безкоштовного розбору твого бізнесу.</p>
+      <p class="ty-sub">Я особисто переглянула твою анкету і звʼяжусь з тобою в Telegram, щоб узгодити час безкоштовного розбору.</p>
 
       <div class="gift-card">
-        <div class="gift-tag">🎁 Твій подарунок вже готовий</div>
-        <div class="gift-title">Знижка від 400€ + бонуси на 630€+</div>
-        <p class="gift-desc">Бонусні матеріали вже в закріплених у Telegram каналі — переходь за кнопкою:</p>
+        <div class="gift-tag">📅 Що далі</div>
+        <div class="gift-title" style="font-size:20px">Очікуй повідомлення в Telegram</div>
+        <p class="gift-desc">Я напишу тобі протягом кількох годин і запропоную зручний час для розбору. А поки — підпишись на канал, там є корисні матеріали для власниць салонів:</p>
         <a href="https://t.me/+rJxxiQxqpx0xYmZi" target="_blank" class="gift-btn">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8l-1.7 8.02c-.12.55-.45.68-.9.42l-2.5-1.84-1.2 1.16c-.13.13-.24.24-.5.24l.18-2.55 4.64-4.19c.2-.18-.04-.28-.31-.1L8.27 14.4l-2.47-.77c-.54-.17-.55-.54.11-.8l9.63-3.71c.45-.17.84.11.7.68z" fill="white"/>
           </svg>
-          Отримати бонусні матеріали в Telegram
+          Перейти в Telegram канал
         </a>
       </div>
 
@@ -1005,26 +1009,6 @@ src="https://www.facebook.com/tr?id=1804729973532929&ev=PageView&noscript=1"
     <div class="reviews-nav next" onclick="document.getElementById('reviewsGrid').scrollBy({left:300,behavior:'smooth'})">→</div>
   </div>
 
-  <!-- ЦИФРИ -->
-  <div class="sp-stats">
-    <div class="sp-stat">
-      <div class="sp-stat-num">22+</div>
-      <div class="sp-stat-label">власниць пройшли програму</div>
-    </div>
-    <div class="sp-stat">
-      <div class="sp-stat-num">×2</div>
-      <div class="sp-stat-label">середнє зростання доходу за 3 місяці</div>
-    </div>
-    <div class="sp-stat">
-      <div class="sp-stat-num">30 хв</div>
-      <div class="sp-stat-label">на день на управління після програми</div>
-    </div>
-  </div>
-
-  <div class="sp-cta">
-    <button class="btn sp-cta-btn" onclick="scrollToForm()">Заповнити анкету</button>
-  </div>
-
 </div><!-- /social-proof-section -->
 
 <!-- ── LIGHTBOX ── -->
@@ -1057,7 +1041,7 @@ src="https://www.facebook.com/tr?id=1804729973532929&ev=PageView&noscript=1"
 
 <script>
 var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwX766a6ezg9MJlKBrC36TzOReMeW9ITPwS92_Z8KBEacyQNs5RdgWrhWRQo8EB5p2lXA/exec';
-var sel = { act: '', sub: '', rev: '', ready: '' };
+var sel = { act: '', rev: '', team: '', pain: '' };
 var utmSource = new URLSearchParams(window.location.search).get('source') || 'direct';
 
 function initGrid(gridId, key, errId) {
@@ -1070,10 +1054,10 @@ function initGrid(gridId, key, errId) {
     });
   });
 }
-initGrid('actGrid',   'act',   'errAct');
-initGrid('subGrid',   'sub',   'errSub');
-initGrid('revGrid',   'rev',   'errRev');
-initGrid('readyGrid', 'ready', 'errReady');
+initGrid('actGrid',  'act',  'errAct');
+initGrid('revGrid',  'rev',  'errRev');
+initGrid('teamGrid', 'team', 'errTeam');
+initGrid('painGrid', 'pain', 'errPain');
 
 function req(id, errId) {
   var v = document.getElementById(id).value.trim();
@@ -1096,7 +1080,6 @@ window.goPanel2 = function() {
   d1.classList.remove('active'); d1.classList.add('done'); d1.textContent = '✓';
   document.getElementById('line1').classList.add('done');
   document.getElementById('dot2').classList.add('active');
-  // Hide top sections
   document.getElementById('top-collapse').classList.add('hidden');
   document.getElementById('form-intro-collapse').classList.add('hidden');
   window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -1109,7 +1092,6 @@ window.goPanel1 = function() {
   d1.classList.remove('done'); d1.classList.add('active'); d1.textContent = '1';
   document.getElementById('line1').classList.remove('done');
   document.getElementById('dot2').classList.remove('active');
-  // Restore top sections
   document.getElementById('top-collapse').classList.remove('hidden');
   document.getElementById('form-intro-collapse').classList.remove('hidden');
   window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -1117,10 +1099,11 @@ window.goPanel1 = function() {
 
 window.submitForm = function() {
   var ok = true;
-  if (!sel.act)   { document.getElementById('errAct').classList.add('on');   ok = false; }
-  if (!sel.sub)   { document.getElementById('errSub').classList.add('on');   ok = false; }
-  if (!sel.rev)   { document.getElementById('errRev').classList.add('on');   ok = false; }
-  if (!sel.ready) { document.getElementById('errReady').classList.add('on'); ok = false; }
+  if (!sel.act)  { document.getElementById('errAct').classList.add('on');  ok = false; }
+  if (!sel.rev)  { document.getElementById('errRev').classList.add('on');  ok = false; }
+  if (!sel.team) { document.getElementById('errTeam').classList.add('on'); ok = false; }
+  if (!sel.pain) { document.getElementById('errPain').classList.add('on'); ok = false; }
+  if (!req('fDescr', 'errDescr')) ok = false;
   if (!ok) return;
 
   var btn = document.getElementById('submitBtn');
@@ -1130,55 +1113,89 @@ window.submitForm = function() {
     method: 'POST', mode: 'no-cors',
     headers: { 'Content-Type': 'text/plain' },
     body: JSON.stringify({
-      source:    utmSource,
-      name:      document.getElementById('fName').value.trim(),
-      telegram:  document.getElementById('fTg').value.trim(),
-      instagram: document.getElementById('fInsta').value.trim(),
-      activity:  sel.act,
-      subscribed: sel.sub,
-      revenue:   sel.rev,
-      readiness: sel.ready,
-      timestamp: new Date().toISOString()
+      source:       utmSource,
+      name:         document.getElementById('fName').value.trim(),
+      telegram:     document.getElementById('fTg').value.trim(),
+      instagram:    document.getElementById('fInsta').value.trim(),
+      activity:     sel.act,
+      revenue:      sel.rev,
+      team:         sel.team,
+      pain:         sel.pain,
+      description:  document.getElementById('fDescr').value.trim(),
+      form_type:    'razvor',
+      timestamp:    new Date().toISOString()
     })
   }).then(showThanks).catch(showThanks);
 };
 
 function showThanks() {
-  // Meta Pixel — Lead event
-  if (typeof fbq !== 'undefined') {
-    fbq('track', 'Lead');
-  }
+  if (typeof fbq !== 'undefined') { fbq('track', 'Lead'); }
   document.getElementById('form-main').classList.add('hidden');
   document.getElementById('ty-state').classList.add('on');
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// ── COUNTDOWN TIMER ──
+// ── COUNTDOWN TIMER TO NEXT WEDNESDAY 17:00 KYIV TIME ──
 (function() {
-  var deadline = new Date('2026-09-17T23:59:00+03:00').getTime();
-  function pad(n) { return n < 10 ? '0' + n : n; }
-  function tick() {
-    var now = Date.now();
-    var diff = deadline - now;
-    if (diff <= 0) {
-      document.getElementById('t-days').textContent = '00';
-      document.getElementById('t-hours').textContent = '00';
-      document.getElementById('t-mins').textContent = '00';
-      document.getElementById('t-secs').textContent = '00';
-      return;
+  function getNextWednesday1700() {
+    // Kyiv is UTC+2 (or UTC+3 in summer). We'll compute using local Date in UTC+2/3
+    var now = new Date();
+    // Find the next Wednesday at 17:00 Kyiv (UTC+3 during DST, UTC+2 otherwise)
+    // Simple approach: compute Wednesday 17:00 in Europe/Kyiv
+    // Kyiv is UTC+2 standard, UTC+3 summer (DST starts last Sunday March, ends last Sunday October)
+    // March 23 2026 = DST active → UTC+3
+    var kyivOffset = 3 * 60; // minutes, adjust if needed
+    var nowUtc = now.getTime() + now.getTimezoneOffset() * 60000;
+    var kyivNow = new Date(nowUtc + kyivOffset * 60000);
+
+    var day = kyivNow.getDay(); // 0=Sun, 3=Wed
+    var daysUntilWed = (3 - day + 7) % 7;
+    if (daysUntilWed === 0) {
+      // Today is Wednesday — check if 17:00 has passed
+      var todayAt17 = new Date(kyivNow);
+      todayAt17.setHours(17, 0, 0, 0);
+      if (kyivNow >= todayAt17) daysUntilWed = 7; // next week
     }
-    var d = Math.floor(diff / 86400000);
-    var h = Math.floor((diff % 86400000) / 3600000);
-    var m = Math.floor((diff % 3600000) / 60000);
-    var s = Math.floor((diff % 60000) / 1000);
-    document.getElementById('t-days').textContent = pad(d);
+
+    var target = new Date(kyivNow);
+    target.setDate(target.getDate() + daysUntilWed);
+    target.setHours(17, 0, 0, 0);
+
+    // Convert back to UTC ms
+    return target.getTime() - kyivOffset * 60000;
+  }
+
+  var deadline = getNextWednesday1700();
+
+  function pad(n, len) {
+    var s = String(n);
+    while (s.length < (len || 2)) s = '0' + s;
+    return s;
+  }
+
+  function tick() {
+    var diff = deadline - Date.now();
+    if (diff <= 0) {
+      // Recalculate for next Wednesday
+      deadline = getNextWednesday1700();
+      diff = deadline - Date.now();
+    }
+    var d  = Math.floor(diff / 86400000);
+    var h  = Math.floor((diff % 86400000) / 3600000);
+    var m  = Math.floor((diff % 3600000) / 60000);
+    var s  = Math.floor((diff % 60000) / 1000);
+    var ms = diff % 1000;
+    document.getElementById('t-days').textContent  = pad(d);
     document.getElementById('t-hours').textContent = pad(h);
-    document.getElementById('t-mins').textContent = pad(m);
-    document.getElementById('t-secs').textContent = pad(s);
+    document.getElementById('t-mins').textContent  = pad(m);
+    document.getElementById('t-secs').textContent  = pad(s);
+    document.getElementById('t-ms').textContent    = pad(ms, 3);
   }
   tick();
-  setInterval(tick, 1000);
+  setInterval(tick, 50); // update every 50ms for smooth milliseconds
 })();
+
+// ── SOCIAL PROOF TOASTS ──
 (function() {
   var names = [
     'Катерина С.', 'Юля М.', 'Александра П.', 'Оксана В.', 'Марина Т.',
@@ -1187,21 +1204,14 @@ function showThanks() {
   ];
   var times = ['3 хвилини тому', '7 хвилин тому', '12 хвилин тому', '18 хвилин тому', '24 хвилини тому', 'щойно'];
 
-  // Стилі тосту
   var style = document.createElement('style');
   style.textContent = `
     .sp-toast {
-      position: fixed;
-      bottom: 24px;
-      left: 20px;
-      z-index: 9999;
-      background: #fff;
-      border-radius: 10px;
+      position: fixed; bottom: 24px; left: 20px; z-index: 9999;
+      background: #fff; border-radius: 10px;
       box-shadow: 0 4px 24px rgba(0,0,0,0.13);
       padding: 12px 16px 12px 14px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
+      display: flex; align-items: center; gap: 12px;
       max-width: 260px;
       transform: translateX(-110%);
       transition: transform 0.4s cubic-bezier(.34,1.56,.64,1);
@@ -1209,8 +1219,7 @@ function showThanks() {
     }
     .sp-toast.show { transform: translateX(0); }
     .sp-toast-avatar {
-      width: 36px; height: 36px;
-      border-radius: 50%;
+      width: 36px; height: 36px; border-radius: 50%;
       background: linear-gradient(135deg, #3D0000, #9BA1BA);
       display: flex; align-items: center; justify-content: center;
       font-size: 15px; color: #fff; font-weight: 600;
@@ -1230,18 +1239,15 @@ function showThanks() {
   function showToast() {
     var name = names[Math.floor(Math.random() * names.length)];
     var time = times[Math.floor(Math.random() * times.length)];
-    var initial = name.charAt(0);
-
     var toast = document.createElement('div');
     toast.className = 'sp-toast';
     toast.innerHTML =
-      '<div class="sp-toast-avatar">' + initial + '</div>' +
+      '<div class="sp-toast-avatar">' + name.charAt(0) + '</div>' +
       '<div class="sp-toast-body">' +
         '<div class="sp-toast-name">' + name + '</div>' +
-        '<div class="sp-toast-text">заповнила анкету · ' + time + '</div>' +
+        '<div class="sp-toast-text">записалась на розбір · ' + time + '</div>' +
       '</div>' +
       '<button class="sp-toast-close" onclick="this.parentNode.remove()">✕</button>';
-
     document.body.appendChild(toast);
     setTimeout(function() { toast.classList.add('show'); }, 50);
     setTimeout(function() {
@@ -1250,7 +1256,6 @@ function showThanks() {
     }, 4000);
   }
 
-  // Перший тост через 8 секунд, потім кожні 20-35 секунд
   setTimeout(function() {
     showToast();
     setInterval(showToast, 20000 + Math.random() * 15000);
@@ -1284,20 +1289,6 @@ document.addEventListener('keydown', function(e) {
   if (e.key === 'ArrowLeft') lightboxStep(-1);
   if (e.key === 'ArrowRight') lightboxStep(1);
 });
-
-// ── Повернутись до анкети (Крок 1) з блоку кейсів/відгуків ──
-window.scrollToForm = function() {
-  var panel2 = document.getElementById('panel2');
-  if (panel2 && panel2.classList.contains('active') && typeof goPanel1 === 'function') {
-    goPanel1();
-  } else {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-  setTimeout(function() {
-    var el = document.getElementById('fName');
-    if (el) el.focus();
-  }, 450);
-};
 </script>
 </body>
 </html>
