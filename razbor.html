@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Анкета запису на безкоштовний розбір · BEAUTY MBA</title>
+<title>Запис на безкоштовний розбір · BEAUTY MBA 3 сезон</title>
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -75,17 +75,17 @@ src="https://www.facebook.com/tr?id=1804729973532929&ev=PageView&noscript=1"
 </style>
 <style>
   :root {
-    --cream: #F5F0E8;
-    --ivory: #FAF7F2;
-    --dark: #1C1A17;
-    --burgundy: #7A2535;
-    --dusty: #8B7B8B;
-    --slate: #4A5568;
-    --gold: #C9A96E;
-    --light-border: #E2D9CE;
-    --error: #C53030;
-    --error-bg: #FFF5F5;
-    --error-border: #FC8181;
+    --cream: #F2EEE2;
+    --ivory: #F2EEE2;
+    --dark: #1E1C2E;
+    --burgundy: #360202;
+    --dusty: #9BA1BA;
+    --slate: #9BA1BA;
+    --gold: #9BA1BA;
+    --light-border: #DAD7CB;
+    --error: #360202;
+    --error-bg: #F3E7E5;
+    --error-border: #C79490;
     --topbar-h: 48px;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -99,6 +99,7 @@ src="https://www.facebook.com/tr?id=1804729973532929&ev=PageView&noscript=1"
     min-height: 100vh;
     padding-top: 72px;
   }
+
 
   /* ── COLLAPSIBLE TOP SECTIONS ── */
   #top-collapse, #form-intro-collapse {
@@ -138,8 +139,8 @@ src="https://www.facebook.com/tr?id=1804729973532929&ev=PageView&noscript=1"
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    background: rgba(201,169,110,0.12);
-    border: 1px solid rgba(201,169,110,0.25);
+    background: rgba(155,161,186,0.12);
+    border: 1px solid rgba(155,161,186,0.25);
     border-radius: 2px;
     padding: 3px 12px;
     font-size: 11px;
@@ -259,47 +260,6 @@ src="https://www.facebook.com/tr?id=1804729973532929&ev=PageView&noscript=1"
     .expert-facts li { justify-content: flex-start; text-align: left; }
   }
 
-  /* ── WHAT YOU GET BLOCK ── */
-  .razvor-block {
-    background: white;
-    border: 1px solid var(--light-border);
-    border-top: 3px solid var(--gold);
-    border-radius: 4px;
-    padding: 22px 22px;
-    margin-bottom: 24px;
-  }
-  .razvor-block-title {
-    font-family: 'Prata', serif;
-    font-size: 17px;
-    font-weight: 400;
-    margin-bottom: 16px;
-    color: var(--dark);
-    line-height: 1.3;
-  }
-  .razvor-item {
-    display: flex;
-    gap: 12px;
-    margin-bottom: 12px;
-    font-size: 14px;
-    line-height: 1.55;
-    color: var(--slate);
-  }
-  .razvor-item:last-child { margin-bottom: 0; }
-  .razvor-num {
-    flex-shrink: 0;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background: var(--burgundy);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 11px;
-    font-weight: 600;
-    margin-top: 1px;
-  }
-
   /* ── FORM HEADER ── */
   .form-tag {
     display: inline-block;
@@ -364,20 +324,15 @@ src="https://www.facebook.com/tr?id=1804729973532929&ev=PageView&noscript=1"
     color: var(--slate); margin-bottom: 8px;
   }
   .field-label span { color: var(--burgundy); }
-  input[type="text"], textarea {
+  input[type="text"] {
     width: 100%; padding: 13px 16px;
     border: 1px solid var(--light-border); border-radius: 4px;
     font-family: 'Aktiv Grotesk Corp', sans-serif; font-size: 15px; font-weight: 300;
     color: var(--dark); background: white; outline: none;
     transition: border-color 0.2s; -webkit-appearance: none;
   }
-  textarea {
-    resize: vertical;
-    min-height: 88px;
-    line-height: 1.6;
-  }
-  input:focus, textarea:focus { border-color: var(--burgundy); }
-  input.err, textarea.err { border-color: var(--error-border); background: var(--error-bg); }
+  input:focus { border-color: var(--burgundy); }
+  input.err { border-color: var(--error-border); background: var(--error-bg); }
   .field-error { font-size: 12px; color: var(--error); margin-top: 5px; display: none; }
   .field-error.on { display: block; }
 
@@ -409,6 +364,19 @@ src="https://www.facebook.com/tr?id=1804729973532929&ev=PageView&noscript=1"
   }
   .btn:hover { background: #5E1D28; transform: translateY(-1px); }
   .btn:disabled { background: var(--dusty); cursor: not-allowed; transform: none; }
+  .cases-hint {
+    display: flex; align-items: center; justify-content: center; gap: 6px;
+    font-size: 12px; color: var(--dusty); text-align: center;
+    margin-top: 18px; letter-spacing: 0.03em;
+  }
+  .cases-hint-arrow {
+    display: inline-block; color: var(--burgundy);
+    animation: hintBounce 1.6s ease-in-out infinite;
+  }
+  @keyframes hintBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(4px); }
+  }
   .btn-back {
     display: block; text-align: center; font-size: 12px; color: var(--dusty);
     cursor: pointer; margin-top: 16px; letter-spacing: 0.04em;
@@ -444,35 +412,295 @@ src="https://www.facebook.com/tr?id=1804729973532929&ev=PageView&noscript=1"
     font-family: 'Prata', serif;
     font-size: 26px; font-weight: 600; margin-bottom: 8px; line-height: 1.2;
   }
-  .gift-desc {
-    font-size: 14px; color: var(--slate); margin-bottom: 20px; line-height: 1.65;
-  }
+  .gift-desc { font-size: 14px; color: var(--slate); line-height: 1.7; margin-bottom: 16px; }
   .gift-btn {
-    display: inline-flex; align-items: center; gap: 8px;
-    background: #2AABEE; color: white; text-decoration: none;
-    padding: 13px 22px; border-radius: 4px;
-    font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
-    transition: background 0.2s;
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    background: #26A5E4; color: white;
+    padding: 14px; border-radius: 4px; font-size: 13px; font-weight: 600;
+    letter-spacing: 0.04em; text-decoration: none; transition: background 0.2s;
   }
-  .gift-btn:hover { background: #1A8FCC; }
+  .gift-btn:hover { background: #1d8fc7; }
+  .gift-btn svg { flex-shrink: 0; }
 
-  .social-prompt { font-size: 13px; color: var(--dusty); text-align: center; margin-bottom: 14px; }
+  /* Social follow */
+  .social-prompt { font-size: 13px; color: var(--slate); margin-bottom: 12px; text-align: center; }
   .social-btns { display: flex; gap: 10px; justify-content: center; }
   .social-btn {
-    display: inline-flex; align-items: center; gap: 7px;
-    padding: 10px 20px; border: 1px solid var(--light-border); border-radius: 4px;
-    font-size: 12px; font-weight: 500; color: var(--dark); text-decoration: none;
-    transition: border-color 0.2s;
+    flex: 1; padding: 11px 16px; border: 1px solid var(--light-border);
+    border-radius: 4px; font-size: 13px; font-weight: 500;
+    text-decoration: none; color: var(--dark); text-align: center;
+    transition: border-color 0.2s, color 0.2s;
+    display: flex; align-items: center; justify-content: center; gap: 6px;
   }
   .social-btn:hover { border-color: var(--burgundy); color: var(--burgundy); }
+
+  /* ── КЕЙСИ ТА ВІДГУКИ ── */
+  .social-proof-section {
+    background: var(--dark);
+    padding: 60px 24px 80px;
+    margin-top: 0;
+  }
+  .sp-section-title {
+    font-family: 'Prata', serif;
+    font-size: 22px;
+    color: var(--cream);
+    text-align: center;
+    margin-bottom: 32px;
+    letter-spacing: 0.01em;
+  }
+
+  /* Кейси */
+  .cases-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .case-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(155,161,186,0.2);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .case-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 20px 24px;
+  }
+  .case-avatar {
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    border: 1px solid rgba(155,161,186,0.35);
+    flex-shrink: 0;
+  }
+  .case-name { font-family: 'Prata', serif; font-size: 17px; font-weight: 400; color: var(--cream); }
+  .case-role { font-size: 12px; color: var(--slate); margin-top: 3px; }
+  .case-points {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 0 24px 24px;
+  }
+  .case-col { flex: 1; }
+  .case-col-title {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  .case-item {
+    font-size: 12px;
+    line-height: 1.45;
+    margin-bottom: 7px;
+    padding-left: 14px;
+    position: relative;
+    color: var(--cream);
+    opacity: 0.85;
+  }
+  .case-item--before::before { content: '—'; position: absolute; left: 0; color: var(--slate); }
+  .case-item--after::before { content: '✓'; position: absolute; left: 0; color: var(--cream); }
+  .case-arrow {
+    font-size: 20px;
+    color: var(--gold);
+    padding-top: 20px;
+    flex-shrink: 0;
+  }
+
+  /* Відгуки — скрін-фото, карусель */
+  .reviews-carousel { position: relative; max-width: 600px; margin: 0 auto; }
+  .reviews-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 10px;
+    padding: 2px 2px 10px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .reviews-grid::-webkit-scrollbar { display: none; }
+  .review-shot-link {
+    flex: 0 0 auto;
+    width: 145px;
+    scroll-snap-align: start;
+  }
+  @media (max-width: 460px) {
+    .review-shot-link { width: 130px; }
+  }
+  .review-shot {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid rgba(155,161,186,0.25);
+    cursor: zoom-in;
+    transition: transform 0.2s;
+  }
+  .review-shot:hover { transform: scale(1.02); }
+  .reviews-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    background: var(--dark);
+    border: 1px solid rgba(155,161,186,0.4);
+    color: var(--cream);
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    font-size: 15px;
+    z-index: 2;
+  }
+  .reviews-nav:hover { background: #2A2740; }
+  .reviews-nav.prev { left: -14px; }
+  .reviews-nav.next { right: -14px; }
+  @media (max-width: 640px) {
+    .reviews-nav.prev { left: -6px; }
+    .reviews-nav.next { right: -6px; }
+  }
+
+  /* Статистика */
+  .sp-stats {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    margin-top: 48px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid rgba(155,161,186,0.2);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .sp-stat {
+    flex: 1;
+    text-align: center;
+    padding: 20px 12px;
+    border-right: 1px solid rgba(155,161,186,0.15);
+  }
+  .sp-stat:last-child { border-right: none; }
+  .sp-stat-num {
+    font-family: 'Prata', serif;
+    font-size: 28px;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .sp-stat-label {
+    font-size: 11px;
+    color: var(--slate);
+    line-height: 1.4;
+  }
+
+  /* CTA після кейсів/відгуків */
+  .sp-cta { max-width: 600px; margin: 32px auto 0; }
+  .sp-cta-btn { margin-top: 0; }
+
+  /* Лайтбокс для відгуків */
+  .review-lightbox {
+    display: none;
+    position: fixed; inset: 0;
+    background: rgba(10,9,16,0.92);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+  }
+  .review-lightbox.on { display: flex; }
+  .lb-img {
+    max-width: 90vw;
+    max-height: 85vh;
+    border-radius: 6px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  }
+  .lb-close {
+    position: absolute; top: 16px; right: 20px;
+    width: 38px; height: 38px; border-radius: 50%;
+    background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2);
+    color: var(--cream); font-size: 16px; cursor: pointer;
+  }
+  .lb-close:hover { background: rgba(255,255,255,0.16); }
+  .lb-nav {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    width: 44px; height: 44px; border-radius: 50%;
+    background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2);
+    color: var(--cream); font-size: 18px; cursor: pointer;
+  }
+  .lb-nav:hover { background: rgba(255,255,255,0.16); }
+  .lb-prev { left: 16px; }
+  .lb-next { right: 16px; }
+  @media (max-width: 460px) {
+    .lb-nav { width: 36px; height: 36px; font-size: 15px; }
+    .lb-prev { left: 6px; }
+    .lb-next { right: 6px; }
+  }
+
+  /* ── FOOTER ── */
+  .site-footer {
+    background: var(--dark);
+    border-top: 2px solid var(--burgundy);
+    padding: 32px 24px 28px;
+    margin-top: 0;
+  }
+  .footer-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(155,161,186,0.2);
+  }
+  .footer-brand {
+    font-family: 'Prata', serif;
+    font-size: 15px;
+    letter-spacing: 0.06em;
+    color: var(--cream);
+  }
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+  .footer-links a {
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    color: var(--slate);
+    text-decoration: none;
+  }
+  .footer-links a:hover { color: var(--cream); }
+  .footer-req-label {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--slate);
+    margin: 20px 0 10px;
+  }
+  .footer-req-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px 40px;
+  }
+  .footer-req-item { font-size: 12px; color: var(--cream); opacity: 0.85; line-height: 1.6; }
+  .footer-req-item span { display: block; color: var(--slate); opacity: 0.85; }
 </style>
 </head>
 <body>
 
-<!-- STICKY TOPBAR -->
+<!-- ── STICKY TOPBAR ── -->
 <div class="topbar">
   <div class="topbar-inner">
-    <div class="topbar-places">⏳ До старту розборів залишилось</div>
+    <div class="topbar-places">⏳ Набір на BEAUTY MBA [3 сезон] закривається <span style="white-space:nowrap">17/09 о 23:59</span></div>
+    <div class="topbar-spots">🔴 На цьому тижні залишилось <strong>3 місця</strong> на розбір</div>
     <div class="topbar-timer">
       <span class="timer-block"><span id="t-days">00</span><span class="timer-label">дн</span></span>
       <span class="timer-sep">:</span>
@@ -481,8 +709,6 @@ src="https://www.facebook.com/tr?id=1804729973532929&ev=PageView&noscript=1"
       <span class="timer-block"><span id="t-mins">00</span><span class="timer-label">хв</span></span>
       <span class="timer-sep">:</span>
       <span class="timer-block"><span id="t-secs">00</span><span class="timer-label">сек</span></span>
-      <span class="timer-sep">:</span>
-      <span class="timer-block"><span id="t-ms">000</span><span class="timer-label">мс</span></span>
     </div>
   </div>
 </div>
@@ -511,44 +737,36 @@ src="https://www.facebook.com/tr?id=1804729973532929&ev=PageView&noscript=1"
     </div>
   </div>
 
-  <!-- ── WHAT YOU GET BLOCK ── -->
-  <div class="form-tag" style="margin-bottom:12px">Запис відкрито</div>
-  <h1 style="margin-bottom:20px">Запишись на безкоштовний <strong>розбір</strong> свого салону з Лерою</h1>
-  <div class="razvor-block">
-    <div class="razvor-block-title">Що відбувається на безкоштовному розборі</div>
-    <div class="razvor-item">
-      <div class="razvor-num">1</div>
-      <div>Розбираємо твою поточну ситуацію — що болить, де застрягла, чому не росте дохід попри всі зусилля</div>
-    </div>
-    <div class="razvor-item">
-      <div class="razvor-num">2</div>
-      <div>Знаходимо конкретне вузьке місце у твоєму бізнесі — те, що зупиняє ріст прямо зараз</div>
-    </div>
-    <div class="razvor-item">
-      <div class="razvor-num">3</div>
-      <div>Формуємо покроковий план дій під твою ситуацію — що робити в першу чергу, щоб побачити результат</div>
-    </div>
-  </div>
-
   </div><!-- /top-collapse -->
 
   <!-- ── FORM MAIN ── -->
   <div id="form-main">
-    <div id="form-intro-collapse">
-    <p class="form-note">Заповнення займає 2 хвилини</p>
-    </div><!-- /form-intro-collapse -->
+    <div class="form-tag">Запис відкрито</div>
+    <h1>Обери зручний час — і отримай свій безкоштовний розбір салону від <strong>Лери</strong></h1>
 
-    <!-- STEP INDICATOR -->
-    <div class="step-indicator">
-      <div class="step-dot active" id="dot1">1</div>
-      <div class="step-line" id="line1"></div>
-      <div class="step-dot" id="dot2">2</div>
+    <div id="form-intro-collapse">
+    <div class="intro-card">
+      <p>Привіт, це Лера.<br>Ти вже на крок ближче до розбору — залишилось лише узгодити контакти й час дзвінка.</p>
+      <p>На розборі за ~40 хвилин ми:</p>
+      <div class="intro-arrow">Занурюємось у твою ситуацію та запит</div>
+      <div class="intro-arrow">Формуємо майнд-карту з кроками конкретно під твою ситуацію</div>
+      <div class="intro-arrow">Якщо бачу, що зможу дати тобі результат — розповідаю як приєднатись за умовами передзапису до <strong>BEAUTY MBA</strong></div>
     </div>
+
+    <div class="benefits">
+      <div class="benefits-title">На розборі ти отримаєш:</div>
+      <div class="benefit-item">Чіткий план дій під твою ситуацію ще до закінчення дзвінка</div>
+      <div class="benefit-item">Розбір твоїх фінансів, команди та завантаженості салону</div>
+      <div class="benefit-item">Подарунки від BEAUTY MBA — добірка найкорисніших файлів для майстрів і власниць салонів: інтенсив, чек-листи, таблиці та макети, щоб зібрати команду, завантажити салон і контролювати метрики, які реально впливають на дохід</div>
+    </div>
+
+    <p class="form-note">Запис займає 1 хвилину</p>
+    </div><!-- /form-intro-collapse -->
 
     <!-- PANEL 1 -->
     <div class="panel active" id="panel1">
-      <div class="panel-title">Крок 1 — Контакти</div>
-      <p class="panel-hint">Перевір дані — щоб я точно змогла з тобою звʼязатись</p>
+      <div class="panel-title">Контакти та зручний час</div>
+      <p class="panel-hint">Перевір дані — щоб я точно змогла з тобою звʼязатись і підтвердити час</p>
 
       <div class="field">
         <label class="field-label">Як тебе звати? <span>*</span></label>
@@ -568,77 +786,32 @@ src="https://www.facebook.com/tr?id=1804729973532929&ev=PageView&noscript=1"
         <div class="field-error" id="errInsta">Введи нікнейм в Instagram</div>
       </div>
 
-      <button class="btn" onclick="goPanel2()">Далі →</button>
-    </div>
-
-    <!-- PANEL 2 -->
-    <div class="panel" id="panel2">
-      <div class="panel-title">Крок 2 — Про твій бізнес</div>
-      <p class="panel-hint">Це допоможе підготуватись до розмови конкретно під твою ситуацію</p>
+      <hr class="form-divider">
 
       <div class="field">
-        <label class="field-label">Ким ти зараз є у своєму бізнесі? <span>*</span></label>
-        <div class="rgrid col1" id="actGrid">
-          <div class="ropt" data-val="owner">Я власниця салону — є команда, сама вже не працюю руками</div>
-          <div class="ropt" data-val="owner-master">Я власниця, але ще й сама приймаю клієнтів</div>
-          <div class="ropt" data-val="master-growing">Я майстриня й паралельно намагаюсь вибудувати салон</div>
-          <div class="ropt" data-val="planning">Я планую відкрити салон найближчим часом</div>
+        <label class="field-label">Який день тобі зручніший? <span>*</span></label>
+        <div class="rgrid" id="dayGrid">
+          <div class="ropt" data-val="weekday">Будній день</div>
+          <div class="ropt" data-val="weekend">Вихідний день</div>
         </div>
-        <div class="field-error" id="errAct">Оберіть варіант</div>
+        <div class="field-error" id="errDay">Оберіть варіант</div>
       </div>
 
       <hr class="form-divider">
 
       <div class="field">
-        <label class="field-label">Поточний оборот салону за місяць <span>*</span></label>
-        <div class="rgrid col1" id="revGrid">
-          <div class="ropt" data-val="lt80">До 80 000 грн</div>
-          <div class="ropt" data-val="80-200">від 80 000 до 200 000 грн</div>
-          <div class="ropt" data-val="200-500">від 200 000 до 500 000 грн</div>
-          <div class="ropt" data-val="500-1m">від 500 000 до 1 млн грн</div>
-          <div class="ropt" data-val="1m+">Більше 1 млн грн</div>
+        <label class="field-label">Який час доби зручніший? <span>*</span></label>
+        <div class="rgrid col1" id="timeGrid">
+          <div class="ropt" data-val="morning">Зранку (9:00–12:00)</div>
+          <div class="ropt" data-val="midday">Вдень (12:00–16:00)</div>
+          <div class="ropt" data-val="evening">Ввечері (16:00–20:00)</div>
         </div>
-        <div class="field-error" id="errRev">Оберіть варіант</div>
+        <div class="field-error" id="errTime">Оберіть варіант</div>
       </div>
 
-      <hr class="form-divider">
-
-      <div class="field">
-        <label class="field-label">Скільки людей у тебе в команді? <span>*</span></label>
-        <div class="rgrid" id="teamGrid">
-          <div class="ropt" data-val="0">Поки що немає</div>
-          <div class="ropt" data-val="1-2">1–2 майстри</div>
-          <div class="ropt" data-val="3-5">3–5 майстрів</div>
-          <div class="ropt" data-val="6+">6 і більше</div>
-        </div>
-        <div class="field-error" id="errTeam">Оберіть варіант</div>
-      </div>
-
-      <hr class="form-divider">
-
-      <div class="field">
-        <label class="field-label">Який зараз головний запит або біль? <span>*</span></label>
-        <div class="rgrid col1" id="painGrid">
-          <div class="ropt" data-val="team">Команда — плинність, пошук майстрів, мотивація</div>
-          <div class="ropt" data-val="clients">Клієнти — немає стабільного потоку, залежність від акцій</div>
-          <div class="ropt" data-val="profit">Оборот є, але чистий прибуток мінімальний</div>
-          <div class="ropt" data-val="myself">Все тримається на мені — не можу вийти з операційки</div>
-          <div class="ropt" data-val="scale">Хочу масштабуватись, але не знаю з чого починати</div>
-        </div>
-        <div class="field-error" id="errPain">Оберіть варіант</div>
-      </div>
-
-      <hr class="form-divider">
-
-      <div class="field">
-        <label class="field-label">Розкажи коротко — що зараз відбувається в бізнесі? <span>*</span></label>
-        <textarea id="fDescr" placeholder="Наприклад: є 3 майстри, оборот ~150к, сама ще приймаю, весь час в роботі але доходу не вистачає…"></textarea>
-        <div class="field-error" id="errDescr">Напиши кілька слів про свою ситуацію</div>
-      </div>
-
-      <p style="font-size:12px;color:var(--slate);text-align:center;margin-bottom:16px;line-height:1.5;">📲 Після заповнення я напишу тобі в Telegram і запропоную зручний час для розбору</p>
-      <button class="btn" id="submitBtn" onclick="submitForm()">Надіслати анкету</button>
-      <div class="btn-back" onclick="goPanel1()">← Назад</div>
+      <p style="font-size:12px;color:var(--slate);text-align:center;margin-bottom:16px;line-height:1.5;">📲 Після запису я напишу тобі в Telegram протягом 2 годин, щоб підтвердити точний час розбору</p>
+      <button class="btn" id="submitBtn" onclick="submitForm()">Забронювати час →</button>
+      <div class="cases-hint">Кейси учениць і відгуки — нижче<span class="cases-hint-arrow">↓</span></div>
       <p class="legal">✦ Натискаючи кнопку ти погоджуєшся на обробку персональних даних</p>
     </div>
   </div>
@@ -647,18 +820,18 @@ src="https://www.facebook.com/tr?id=1804729973532929&ev=PageView&noscript=1"
   <div id="ty-state">
     <div class="ty-wrap">
       <span class="ty-emoji">🌸</span>
-      <h2 class="ty-title">Дякую — відпишу<br>найближчим часом</h2>
-      <p class="ty-sub">Я особисто переглянула твою анкету і звʼяжусь з тобою в Telegram, щоб узгодити час безкоштовного розбору.</p>
+      <h2 class="ty-title">Час заброньовано —<br>відпишу для підтвердження</h2>
+      <p class="ty-sub">Я особисто напишу тобі в Telegram протягом 2 годин, щоб підтвердити точний час нашого безкоштовного розбору.</p>
 
       <div class="gift-card">
-        <div class="gift-tag">📅 Що далі</div>
-        <div class="gift-title" style="font-size:20px">Очікуй повідомлення в Telegram</div>
-        <p class="gift-desc">Я напишу тобі протягом кількох годин і запропоную зручний час для розбору. А поки — підпишись на канал, там є корисні матеріали для власниць салонів:</p>
+        <div class="gift-tag">🎁 Поки чекаєш — забери подарунок</div>
+        <div class="gift-title">Корисні матеріали для власниць салонів</div>
+        <p class="gift-desc">Бонусні матеріали вже в закріплених у Telegram каналі — переходь за кнопкою:</p>
         <a href="https://t.me/+rJxxiQxqpx0xYmZi" target="_blank" class="gift-btn">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8l-1.7 8.02c-.12.55-.45.68-.9.42l-2.5-1.84-1.2 1.16c-.13.13-.24.24-.5.24l.18-2.55 4.64-4.19c.2-.18-.04-.28-.31-.1L8.27 14.4l-2.47-.77c-.54-.17-.55-.54.11-.8l9.63-3.71c.45-.17.84.11.7.68z" fill="white"/>
           </svg>
-          Перейти в Telegram канал
+          Отримати бонусні матеріали в Telegram
         </a>
       </div>
 
@@ -678,9 +851,168 @@ src="https://www.facebook.com/tr?id=1804729973532929&ev=PageView&noscript=1"
 
 </div><!-- /page -->
 
+<!-- ── КЕЙСИ ТА ВІДГУКИ ── -->
+<div class="social-proof-section">
+
+  <div class="sp-section-title">Власниці, які вже пройшли програму</div>
+
+  <!-- КЕЙСИ -->
+  <div class="cases-grid">
+
+    <div class="case-card">
+      <div class="case-header">
+        <img class="case-avatar" src="cases/case_yaroslava.jpg" alt="Ярослава">
+        <div>
+          <div class="case-name">Ярослава</div>
+          <div class="case-role">Власниця салону манікюру poruch.beauty, Одеса</div>
+        </div>
+      </div>
+      <div class="case-points">
+        <div class="case-col">
+          <div class="case-col-title">Точка А</div>
+          <div class="case-item case-item--before">Робота 24/7 в ролі майстра</div>
+          <div class="case-item case-item--before">Хаос у фінансах</div>
+          <div class="case-item case-item--before">Чотири кредити на суму 250 000 грн</div>
+        </div>
+        <div class="case-arrow">→</div>
+        <div class="case-col">
+          <div class="case-col-title">Точка Б</div>
+          <div class="case-item case-item--after">Оборот виріс у 2 рази за час навчання</div>
+          <div class="case-item case-item--after">Впровадили прозору аналітику фінансів (P&L)</div>
+          <div class="case-item case-item--after">Збільшила команду та систематизувала процеси</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-card">
+      <div class="case-header">
+        <img class="case-avatar" src="cases/case_zoryana.jpg" alt="Зоряна">
+        <div>
+          <div class="case-name">Зоряна</div>
+          <div class="case-role">Власниця двох салонів NAIL ON у Львові</div>
+        </div>
+      </div>
+      <div class="case-points">
+        <div class="case-col">
+          <div class="case-col-title">Точка А</div>
+          <div class="case-item case-item--before">Перевіряла кожну дрібницю за командою</div>
+          <div class="case-item case-item--before">Хаос у фінансах — CRM не показувала реальну картину</div>
+          <div class="case-item case-item--before">Страх: «якщо я її зараз звільню, то все впаде на мене»</div>
+        </div>
+        <div class="case-arrow">→</div>
+        <div class="case-col">
+          <div class="case-col-title">Точка Б</div>
+          <div class="case-item case-item--after">Фінансова прозорість — робоча P&L-таблиця, яку веде постійно</div>
+          <div class="case-item case-item--after">Автономна команда, яка може працювати без залученості Зоряни</div>
+          <div class="case-item case-item--after">Перейшла у роль власниці-стратега, яка не займається всім у салоні</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-card">
+      <div class="case-header">
+        <img class="case-avatar" src="cases/case_yulia.jpg" alt="Юля Гюлмезоглу">
+        <div>
+          <div class="case-name">Юля Гюлмезоглу</div>
+          <div class="case-role">Власниця косметологічного салону «Touch Cosmetology» у Туреччині</div>
+        </div>
+      </div>
+      <div class="case-points">
+        <div class="case-col">
+          <div class="case-col-title">Точка А</div>
+          <div class="case-item case-item--before">Токсичні працівники, які тягнули всю команду вниз</div>
+          <div class="case-item case-item--before">Відсутність роботи з базою клієнтів</div>
+          <div class="case-item case-item--before">Не працювали з місцевою аудиторією</div>
+        </div>
+        <div class="case-arrow">→</div>
+        <div class="case-col">
+          <div class="case-col-title">Точка Б</div>
+          <div class="case-item case-item--after">Змінила команду</div>
+          <div class="case-item case-item--after">Системно працюють з базою клієнтів</div>
+          <div class="case-item case-item--after">Зробили рекордну касу — 200 000 грн за день</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ВІДГУКИ -->
+  <div class="sp-section-title" style="margin-top:48px">Що кажуть про роботу з Лерою</div>
+
+  <div class="reviews-carousel">
+    <div class="reviews-nav prev" onclick="document.getElementById('reviewsGrid').scrollBy({left:-300,behavior:'smooth'})">←</div>
+    <div class="reviews-grid" id="reviewsGrid">
+      <a class="review-shot-link" href="javascript:void(0)" onclick="openReviewLightbox(1)"><img class="review-shot" loading="lazy" src="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/01.webp" alt="Відгук ученіці 1"></a>
+      <a class="review-shot-link" href="javascript:void(0)" onclick="openReviewLightbox(2)"><img class="review-shot" loading="lazy" src="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/02.webp" alt="Відгук ученіці 2"></a>
+      <a class="review-shot-link" href="javascript:void(0)" onclick="openReviewLightbox(3)"><img class="review-shot" loading="lazy" src="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/03.webp" alt="Відгук ученіці 3"></a>
+      <a class="review-shot-link" href="javascript:void(0)" onclick="openReviewLightbox(4)"><img class="review-shot" loading="lazy" src="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/04.webp" alt="Відгук ученіці 4"></a>
+      <a class="review-shot-link" href="javascript:void(0)" onclick="openReviewLightbox(5)"><img class="review-shot" loading="lazy" src="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/05.webp" alt="Відгук ученіці 5"></a>
+      <a class="review-shot-link" href="javascript:void(0)" onclick="openReviewLightbox(6)"><img class="review-shot" loading="lazy" src="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/06.webp" alt="Відгук ученіці 6"></a>
+      <a class="review-shot-link" href="javascript:void(0)" onclick="openReviewLightbox(7)"><img class="review-shot" loading="lazy" src="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/07.webp" alt="Відгук ученіці 7"></a>
+      <a class="review-shot-link" href="javascript:void(0)" onclick="openReviewLightbox(8)"><img class="review-shot" loading="lazy" src="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/08.webp" alt="Відгук ученіці 8"></a>
+      <a class="review-shot-link" href="javascript:void(0)" onclick="openReviewLightbox(9)"><img class="review-shot" loading="lazy" src="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/09.webp" alt="Відгук ученіці 9"></a>
+      <a class="review-shot-link" href="javascript:void(0)" onclick="openReviewLightbox(10)"><img class="review-shot" loading="lazy" src="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/10.webp" alt="Відгук ученіці 10"></a>
+      <a class="review-shot-link" href="javascript:void(0)" onclick="openReviewLightbox(11)"><img class="review-shot" loading="lazy" src="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/11.webp" alt="Відгук ученіці 11"></a>
+      <a class="review-shot-link" href="javascript:void(0)" onclick="openReviewLightbox(12)"><img class="review-shot" loading="lazy" src="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/12.webp" alt="Відгук ученіці 12"></a>
+      <a class="review-shot-link" href="javascript:void(0)" onclick="openReviewLightbox(13)"><img class="review-shot" loading="lazy" src="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/13.webp" alt="Відгук ученіці 13"></a>
+      <a class="review-shot-link" href="javascript:void(0)" onclick="openReviewLightbox(14)"><img class="review-shot" loading="lazy" src="https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/14.webp" alt="Відгук ученіці 14"></a>
+    </div>
+    <div class="reviews-nav next" onclick="document.getElementById('reviewsGrid').scrollBy({left:300,behavior:'smooth'})">→</div>
+  </div>
+
+  <!-- ЦИФРИ -->
+  <div class="sp-stats">
+    <div class="sp-stat">
+      <div class="sp-stat-num">22+</div>
+      <div class="sp-stat-label">власниць пройшли програму</div>
+    </div>
+    <div class="sp-stat">
+      <div class="sp-stat-num">×2</div>
+      <div class="sp-stat-label">середнє зростання доходу за 3 місяці</div>
+    </div>
+    <div class="sp-stat">
+      <div class="sp-stat-num">30 хв</div>
+      <div class="sp-stat-label">на день на управління після програми</div>
+    </div>
+  </div>
+
+  <div class="sp-cta">
+    <button class="btn sp-cta-btn" onclick="scrollToForm()">Забронювати час</button>
+  </div>
+
+</div><!-- /social-proof-section -->
+
+<!-- ── LIGHTBOX ── -->
+<div class="review-lightbox" id="reviewLightbox" onclick="if(event.target===this) closeReviewLightbox()">
+  <button class="lb-close" onclick="closeReviewLightbox()" aria-label="Закрити">✕</button>
+  <button class="lb-nav lb-prev" onclick="lightboxStep(-1)" aria-label="Попередній">←</button>
+  <img class="lb-img" id="lbImg" src="" alt="Відгук">
+  <button class="lb-nav lb-next" onclick="lightboxStep(1)" aria-label="Наступний">→</button>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">BEAUTY MBA</div>
+      <div class="footer-links">
+        <a href="https://t.me/+rJxxiQxqpx0xYmZi" target="_blank" rel="noopener">Telegram</a>
+        <a href="https://www.instagram.com/valeria.vulakh/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://docs.google.com/document/d/1wwd2imhoLRCEoE7s7H5dZQS_jwqx_HP_NdiccDPbURI/edit?usp=sharing" target="_blank" rel="noopener">Політика конфіденційності</a>
+        <a href="https://docs.google.com/document/d/1akmkH76QPV1oV2q8fft9r3eNwJqDPt1HiRpdWw8ELXY/edit?usp=sharing" target="_blank" rel="noopener">Публічна оферта</a>
+      </div>
+    </div>
+    <div class="footer-req-label">Реквізити</div>
+    <div class="footer-req-grid">
+      <div class="footer-req-item">ФОП Пономарьова Валерія Юріївна<span>ІПН: 3251216881</span></div>
+      <div class="footer-req-item">ФОП Іванова Алла Анатоліївна<span>ІПН: 2416700220</span></div>
+    </div>
+  </div>
+</footer>
+
 <script>
 var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwX766a6ezg9MJlKBrC36TzOReMeW9ITPwS92_Z8KBEacyQNs5RdgWrhWRQo8EB5p2lXA/exec';
-var sel = { act: '', rev: '', team: '', pain: '' };
+var sel = { day: '', time: '' };
 var utmSource = new URLSearchParams(window.location.search).get('source') || 'direct';
 
 function initGrid(gridId, key, errId) {
@@ -693,10 +1025,8 @@ function initGrid(gridId, key, errId) {
     });
   });
 }
-initGrid('actGrid',  'act',  'errAct');
-initGrid('revGrid',  'rev',  'errRev');
-initGrid('teamGrid', 'team', 'errTeam');
-initGrid('painGrid', 'pain', 'errPain');
+initGrid('dayGrid',  'day',  'errDay');
+initGrid('timeGrid', 'time', 'errTime');
 
 function req(id, errId) {
   var v = document.getElementById(id).value.trim();
@@ -710,39 +1040,13 @@ function req(id, errId) {
   return true;
 }
 
-window.goPanel2 = function() {
-  var ok = req('fName','errName') & req('fTg','errTg') & req('fInsta','errInsta');
-  if (!ok) return;
-  document.getElementById('panel1').classList.remove('active');
-  document.getElementById('panel2').classList.add('active');
-  var d1 = document.getElementById('dot1');
-  d1.classList.remove('active'); d1.classList.add('done'); d1.textContent = '✓';
-  document.getElementById('line1').classList.add('done');
-  document.getElementById('dot2').classList.add('active');
-  document.getElementById('top-collapse').classList.add('hidden');
-  document.getElementById('form-intro-collapse').classList.add('hidden');
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-};
-
-window.goPanel1 = function() {
-  document.getElementById('panel2').classList.remove('active');
-  document.getElementById('panel1').classList.add('active');
-  var d1 = document.getElementById('dot1');
-  d1.classList.remove('done'); d1.classList.add('active'); d1.textContent = '1';
-  document.getElementById('line1').classList.remove('done');
-  document.getElementById('dot2').classList.remove('active');
-  document.getElementById('top-collapse').classList.remove('hidden');
-  document.getElementById('form-intro-collapse').classList.remove('hidden');
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-};
-
 window.submitForm = function() {
   var ok = true;
-  if (!sel.act)  { document.getElementById('errAct').classList.add('on');  ok = false; }
-  if (!sel.rev)  { document.getElementById('errRev').classList.add('on');  ok = false; }
-  if (!sel.team) { document.getElementById('errTeam').classList.add('on'); ok = false; }
-  if (!sel.pain) { document.getElementById('errPain').classList.add('on'); ok = false; }
-  if (!req('fDescr', 'errDescr')) ok = false;
+  if (!req('fName','errName'))   ok = false;
+  if (!req('fTg','errTg'))       ok = false;
+  if (!req('fInsta','errInsta')) ok = false;
+  if (!sel.day)  { document.getElementById('errDay').classList.add('on');  ok = false; }
+  if (!sel.time) { document.getElementById('errTime').classList.add('on'); ok = false; }
   if (!ok) return;
 
   var btn = document.getElementById('submitBtn');
@@ -752,89 +1056,54 @@ window.submitForm = function() {
     method: 'POST', mode: 'no-cors',
     headers: { 'Content-Type': 'text/plain' },
     body: JSON.stringify({
-      source:       utmSource,
-      name:         document.getElementById('fName').value.trim(),
-      telegram:     document.getElementById('fTg').value.trim(),
-      instagram:    document.getElementById('fInsta').value.trim(),
-      activity:     sel.act,
-      revenue:      sel.rev,
-      team:         sel.team,
-      pain:         sel.pain,
-      description:  document.getElementById('fDescr').value.trim(),
-      form_type:    'razvor',
-      timestamp:    new Date().toISOString()
+      form:      'razbor_booking',
+      source:    utmSource,
+      name:      document.getElementById('fName').value.trim(),
+      telegram:  document.getElementById('fTg').value.trim(),
+      instagram: document.getElementById('fInsta').value.trim(),
+      preferredDay:  sel.day,
+      preferredTime: sel.time,
+      timestamp: new Date().toISOString()
     })
   }).then(showThanks).catch(showThanks);
 };
 
 function showThanks() {
-  if (typeof fbq !== 'undefined') { fbq('track', 'Lead'); }
+  // Meta Pixel — Lead event
+  if (typeof fbq !== 'undefined') {
+    fbq('track', 'Lead');
+  }
   document.getElementById('form-main').classList.add('hidden');
   document.getElementById('ty-state').classList.add('on');
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// ── COUNTDOWN TIMER TO NEXT WEDNESDAY 17:00 KYIV TIME ──
+// ── COUNTDOWN TIMER ──
 (function() {
-  function getNextWednesday1700() {
-    // Kyiv is UTC+2 (or UTC+3 in summer). We'll compute using local Date in UTC+2/3
-    var now = new Date();
-    // Find the next Wednesday at 17:00 Kyiv (UTC+3 during DST, UTC+2 otherwise)
-    // Simple approach: compute Wednesday 17:00 in Europe/Kyiv
-    // Kyiv is UTC+2 standard, UTC+3 summer (DST starts last Sunday March, ends last Sunday October)
-    // March 23 2026 = DST active → UTC+3
-    var kyivOffset = 3 * 60; // minutes, adjust if needed
-    var nowUtc = now.getTime() + now.getTimezoneOffset() * 60000;
-    var kyivNow = new Date(nowUtc + kyivOffset * 60000);
-
-    var day = kyivNow.getDay(); // 0=Sun, 3=Wed
-    var daysUntilWed = (3 - day + 7) % 7;
-    if (daysUntilWed === 0) {
-      // Today is Wednesday — check if 17:00 has passed
-      var todayAt17 = new Date(kyivNow);
-      todayAt17.setHours(17, 0, 0, 0);
-      if (kyivNow >= todayAt17) daysUntilWed = 7; // next week
-    }
-
-    var target = new Date(kyivNow);
-    target.setDate(target.getDate() + daysUntilWed);
-    target.setHours(17, 0, 0, 0);
-
-    // Convert back to UTC ms
-    return target.getTime() - kyivOffset * 60000;
-  }
-
-  var deadline = getNextWednesday1700();
-
-  function pad(n, len) {
-    var s = String(n);
-    while (s.length < (len || 2)) s = '0' + s;
-    return s;
-  }
-
+  var deadline = new Date('2026-09-17T23:59:00+03:00').getTime();
+  function pad(n) { return n < 10 ? '0' + n : n; }
   function tick() {
-    var diff = deadline - Date.now();
+    var now = Date.now();
+    var diff = deadline - now;
     if (diff <= 0) {
-      // Recalculate for next Wednesday
-      deadline = getNextWednesday1700();
-      diff = deadline - Date.now();
+      document.getElementById('t-days').textContent = '00';
+      document.getElementById('t-hours').textContent = '00';
+      document.getElementById('t-mins').textContent = '00';
+      document.getElementById('t-secs').textContent = '00';
+      return;
     }
-    var d  = Math.floor(diff / 86400000);
-    var h  = Math.floor((diff % 86400000) / 3600000);
-    var m  = Math.floor((diff % 3600000) / 60000);
-    var s  = Math.floor((diff % 60000) / 1000);
-    var ms = diff % 1000;
-    document.getElementById('t-days').textContent  = pad(d);
+    var d = Math.floor(diff / 86400000);
+    var h = Math.floor((diff % 86400000) / 3600000);
+    var m = Math.floor((diff % 3600000) / 60000);
+    var s = Math.floor((diff % 60000) / 1000);
+    document.getElementById('t-days').textContent = pad(d);
     document.getElementById('t-hours').textContent = pad(h);
-    document.getElementById('t-mins').textContent  = pad(m);
-    document.getElementById('t-secs').textContent  = pad(s);
-    document.getElementById('t-ms').textContent    = pad(ms, 3);
+    document.getElementById('t-mins').textContent = pad(m);
+    document.getElementById('t-secs').textContent = pad(s);
   }
   tick();
-  setInterval(tick, 50); // update every 50ms for smooth milliseconds
+  setInterval(tick, 1000);
 })();
-
-// ── SOCIAL PROOF TOASTS ──
 (function() {
   var names = [
     'Катерина С.', 'Юля М.', 'Александра П.', 'Оксана В.', 'Марина Т.',
@@ -843,23 +1112,31 @@ function showThanks() {
   ];
   var times = ['3 хвилини тому', '7 хвилин тому', '12 хвилин тому', '18 хвилин тому', '24 хвилини тому', 'щойно'];
 
+  // Стилі тосту
   var style = document.createElement('style');
   style.textContent = `
     .sp-toast {
-      position: fixed; bottom: 24px; left: 20px; z-index: 9999;
-      background: #fff; border-radius: 10px;
+      position: fixed;
+      bottom: 24px;
+      left: 20px;
+      z-index: 9999;
+      background: #fff;
+      border-radius: 10px;
       box-shadow: 0 4px 24px rgba(0,0,0,0.13);
       padding: 12px 16px 12px 14px;
-      display: flex; align-items: center; gap: 12px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
       max-width: 260px;
       transform: translateX(-110%);
       transition: transform 0.4s cubic-bezier(.34,1.56,.64,1);
-      border-left: 3px solid #C9A96E;
+      border-left: 3px solid #9BA1BA;
     }
     .sp-toast.show { transform: translateX(0); }
     .sp-toast-avatar {
-      width: 36px; height: 36px; border-radius: 50%;
-      background: linear-gradient(135deg, #3D0000, #C9A96E);
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #3D0000, #9BA1BA);
       display: flex; align-items: center; justify-content: center;
       font-size: 15px; color: #fff; font-weight: 600;
       flex-shrink: 0; font-family: serif;
@@ -878,15 +1155,18 @@ function showThanks() {
   function showToast() {
     var name = names[Math.floor(Math.random() * names.length)];
     var time = times[Math.floor(Math.random() * times.length)];
+    var initial = name.charAt(0);
+
     var toast = document.createElement('div');
     toast.className = 'sp-toast';
     toast.innerHTML =
-      '<div class="sp-toast-avatar">' + name.charAt(0) + '</div>' +
+      '<div class="sp-toast-avatar">' + initial + '</div>' +
       '<div class="sp-toast-body">' +
         '<div class="sp-toast-name">' + name + '</div>' +
-        '<div class="sp-toast-text">записалась на розбір · ' + time + '</div>' +
+        '<div class="sp-toast-text">заповнила анкету · ' + time + '</div>' +
       '</div>' +
       '<button class="sp-toast-close" onclick="this.parentNode.remove()">✕</button>';
+
     document.body.appendChild(toast);
     setTimeout(function() { toast.classList.add('show'); }, 50);
     setTimeout(function() {
@@ -895,11 +1175,49 @@ function showThanks() {
     }, 4000);
   }
 
+  // Перший тост через 8 секунд, потім кожні 20-35 секунд
   setTimeout(function() {
     showToast();
     setInterval(showToast, 20000 + Math.random() * 15000);
   }, 8000);
 })();
+</script>
+
+<script>
+// ── Лайтбокс для скрінів відгуків ──
+var reviewShots = [];
+for (var i = 1; i <= 14; i++) {
+  reviewShots.push('https://raw.githubusercontent.com/iEv0/beauty-check-up/main/shots/' + (i < 10 ? '0' + i : i) + '.webp');
+}
+var lbIndex = 0;
+
+window.openReviewLightbox = function(i) {
+  lbIndex = i - 1;
+  document.getElementById('lbImg').src = reviewShots[lbIndex];
+  document.getElementById('reviewLightbox').classList.add('on');
+};
+window.closeReviewLightbox = function() {
+  document.getElementById('reviewLightbox').classList.remove('on');
+};
+window.lightboxStep = function(dir) {
+  lbIndex = (lbIndex + dir + reviewShots.length) % reviewShots.length;
+  document.getElementById('lbImg').src = reviewShots[lbIndex];
+};
+document.addEventListener('keydown', function(e) {
+  if (!document.getElementById('reviewLightbox').classList.contains('on')) return;
+  if (e.key === 'Escape') closeReviewLightbox();
+  if (e.key === 'ArrowLeft') lightboxStep(-1);
+  if (e.key === 'ArrowRight') lightboxStep(1);
+});
+
+// ── Повернутись до форми запису з блоку кейсів/відгуків ──
+window.scrollToForm = function() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  setTimeout(function() {
+    var el = document.getElementById('fName');
+    if (el) el.focus();
+  }, 450);
+};
 </script>
 </body>
 </html>
