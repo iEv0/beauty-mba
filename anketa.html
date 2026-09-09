@@ -512,6 +512,15 @@ src="https://www.facebook.com/tr?id=1804729973532929&ev=PageView&noscript=1"
     flex-shrink: 0;
   }
 
+  /* Блок про Леру всередині темної секції (кейси → кнопка → про Леру → відгуки) */
+  .social-proof-section .expert-hero {
+    border-bottom: 1px solid rgba(155,161,186,0.25);
+  }
+  .social-proof-section .expert-name { color: var(--cream); }
+  .social-proof-section .brand-tag { color: var(--cream); border-color: rgba(155,161,186,0.35); }
+  .social-proof-section .expert-facts li { color: var(--cream); opacity: 0.85; }
+  .social-proof-section .expert-facts li::before { color: var(--gold); }
+
   /* Відгуки — скрін-фото, карусель */
   .reviews-carousel { position: relative; max-width: 600px; margin: 0 auto; }
   .reviews-grid {
@@ -717,25 +726,6 @@ src="https://www.facebook.com/tr?id=1804729973532929&ev=PageView&noscript=1"
 
   <!-- ── COLLAPSIBLE TOP ── -->
   <div id="top-collapse">
-
-  <!-- ── EXPERT HERO ── -->
-  <div class="expert-hero">
-    <div class="expert-photo-wrap">
-      <img class="expert-photo" src="lera_photo.jpg" alt="Валерія Пономарьова" onerror="this.style.background='#E2D9CE'">
-    </div>
-    <div class="expert-info">
-      <div class="expert-name">Валерія Пономарьова</div>
-      <div class="brand-tag">MANICULT · BEAUTY MBA</div>
-      <ul class="expert-facts">
-        <li>У бʼюті сфері вже більше 10 років</li>
-        <li>Пройшла шлях від маленького кабінету у 10 м² до великої студії манікюру з командою понад 20 людей — всього за два роки</li>
-        <li>Практичний досвід побудови системи в двох країнах — в Україні та Південній Африці</li>
-        <li>Салон у Кейптауні за перші місяці роботи виріс до обороту понад 55 000$</li>
-        <li>5 років керую дистанційно MANICULT в Києві витрачаючи 30 хвилин на день</li>
-        <li>Учениці ростуть ×2 в доході за 3 місяці</li>
-      </ul>
-    </div>
-  </div>
 
   </div><!-- /top-collapse -->
 
@@ -979,6 +969,29 @@ src="https://www.facebook.com/tr?id=1804729973532929&ev=PageView&noscript=1"
       </div>
     </div>
 
+  </div>
+
+  <div class="sp-cta">
+    <button class="btn sp-cta-btn" onclick="scrollToForm()">Заповнити анкету</button>
+  </div>
+
+  <!-- ── EXPERT HERO (про Леру) ── -->
+  <div class="expert-hero" style="margin-top:48px;">
+    <div class="expert-photo-wrap">
+      <img class="expert-photo" src="lera_photo.jpg" alt="Валерія Пономарьова" onerror="this.style.background='#E2D9CE'">
+    </div>
+    <div class="expert-info">
+      <div class="expert-name">Валерія Пономарьова</div>
+      <div class="brand-tag">MANICULT · BEAUTY MBA</div>
+      <ul class="expert-facts">
+        <li>У бʼюті сфері вже більше 10 років</li>
+        <li>Пройшла шлях від маленького кабінету у 10 м² до великої студії манікюру з командою понад 20 людей — всього за два роки</li>
+        <li>Практичний досвід побудови системи в двох країнах — в Україні та Південній Африці</li>
+        <li>Салон у Кейптауні за перші місяці роботи виріс до обороту понад 55 000$</li>
+        <li>5 років керую дистанційно MANICULT в Києві витрачаючи 30 хвилин на день</li>
+        <li>Учениці ростуть ×2 в доході за 3 місяці</li>
+      </ul>
+    </div>
   </div>
 
   <!-- ВІДГУКИ -->
